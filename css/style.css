@@ -1,23 +1,36 @@
+/*=============
+Reset 
+===============*/
 *{
     margin: 0;
     padding: 0;
+    /* Hace que el padding no aumente el tamaño total */
     box-sizing: border-box;
 }
-
+/*=============
+Body
+===============*/
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5ead7;
 }
-
+/*=============
+Header
+===============*/
 .header{
     width: 100%;
     background-color: #003b2d;
+    /* Flexbox sirve para acomodar el logo y el menú */
     display: flex;
-    justify-content: space-between;
+    /* Separa el logo y el menú */
+    justify-content: space-between;   
+    /* Centra las cosas verticalmente */
     align-items: center;
     padding: 20px 60px;
 }
-
+/*=============
+Logo
+===============*/
 .logo h1{
     color: #f5ead7;
     font-size: 65px;
@@ -32,15 +45,21 @@ body{
     letter-spacing: 4px;
     margin-left: 6px;
 }
-
-.menu ul{
+/*=============
+Menu de navegación
+===============*/
+.menu ul{   
+    /* Flexbox sirve para poner el menú horizontal */
     display: flex;
     list-style: none;
+    /* Da el espacio entre opciones */
     gap: 35px;
 }
-
+/*=============
+Cambia color al pasar el mouse
+===============*/
 .menu a{
-    color: #f5ead7;
+    color: #dbc39b;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
