@@ -1,0 +1,94 @@
+/*=============
+Reset
+===============*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5ead7;
+    color: #1f291f;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*=============
+Utilidades generales
+===============*/
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*=============
+Header
+===============*/
+.site-header{
+    background-color: #003b2d;
+    color: #f5ead7;
+    padding: 18px 0;
+}
+
+.header-content{
+    overflow: hidden;
+}
+
+/*=============
+Logo
+===============*/
+.logo{
+    float: left;
+}
+
+.logo h1{
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: normal;
+    color: #f5ead7;
+    line-height: 50px; /* acerca LA FLORISTERÍA para que quede donde tiene. */
+}
+
+.logo p{
+    color: #f5ead7;
+    letter-spacing: 4px; 
+    font-size: 12px;
+    margin-left: 5px; /* mueve un poco el subtítulo */
+}
+
+/*=============
+Navegacion
+===============*/
+.main-nav{
+    float: right;
+    margin-top: 22px; /* alinea el menú con el logo */
+}
+
+.main-nav ul{
+    list-style: none;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 28px;
+}
+
+.main-nav a{
+    color: #f5ead7;
+    font-weight: bold;
+    padding: 8px 0;
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 1px; /* separa un poquito las letras */
+}
+
+.main-nav a:hover{
+    border-bottom: 2px solid #c8d28b; /* es la línea de bajo cuando pasa el mouse */
+}
