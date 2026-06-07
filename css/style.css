@@ -1,37 +1,40 @@
 /*=============
 Reset 
 ===============*/
-*{
+* {
     margin: 0;
     padding: 0;
     /* Hace que el padding no aumente el tamaño total */
     box-sizing: border-box;
 }
+
 /*=============
 Body
 ===============*/
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5ead7;
 }
+
 /*=============
 Header
 ===============*/
-.header{
+.header {
     width: 100%;
     background-color: #003b2d;
     /* Flexbox sirve para acomodar el logo y el menú */
     display: flex;
     /* Separa el logo y el menú */
-    justify-content: space-between;   
+    justify-content: space-between;
     /* Centra las cosas verticalmente */
     align-items: center;
     padding: 20px 60px;
 }
+
 /*=============
 Logo
 ===============*/
-.logo h1{
+.logo h1 {
     color: #f5ead7;
     font-size: 65px;
     font-family: Georgia, serif;
@@ -39,36 +42,39 @@ Logo
     line-height: 55px;
 }
 
-.logo p{
+.logo p {
     color: #f5ead7;
     font-size: 12px;
     letter-spacing: 4px;
     margin-left: 6px;
 }
+
 /*=============
 Menu de navegación
 ===============*/
-.menu ul{   
+.menu ul {
     /* Flexbox sirve para poner el menú horizontal */
     display: flex;
     list-style: none;
     /* Da el espacio entre opciones */
     gap: 35px;
 }
+
 /*=============
 Cambia color al pasar el mouse
 ===============*/
-.menu a{
+.menu a {
     color: #f5ead7;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
 }
+
 /*=============
 Confi de la imagen del arbol de cerezos
 ===============*/
-.cerezos{
+.cerezos {
     width: 100%;
     height: 650px;
     background-image: url("../assets/images/cerezos.png");
@@ -79,34 +85,37 @@ Confi de la imagen del arbol de cerezos
     background-repeat: no-repeat;
 }
 
-.contenido-cerezos{
+.contenido-cerezos {
     padding-top: 120px;
     padding-left: 80px;
     color: #f5ead7;
 }
 
-.contenido-cerezos h1{
+.contenido-cerezos h1 {
     font-size: 70px;
     font-family: Georgia, serif;
     line-height: 75px;
     margin-bottom: 30px;
 }
 
-.contenido-cerezos p{
+.contenido-cerezos p {
     font-size: 20px;
     line-height: 40px;
     margin-bottom: 40px;
     width: 600px;
 }
+
+
+
 /*=============
 Confi de los botones en la imagen principal
 ===============*/
-.botones{
+.botones {
     display: flex;
     gap: 20px;
 }
 
-.btn{
+.btn {
     text-decoration: none;
     padding: 14px 30px;
     border-radius: 8px;
@@ -114,12 +123,12 @@ Confi de los botones en la imagen principal
     font-weight: bold;
 }
 
-.btn-ver{
+.btn-ver {
     background-color: #b7bf8f;
     color: white;
 }
 
-.btn-nosotros{
+.btn-nosotros {
     border: 2px solid #f5ead7;
     color: #f5ead7;
 }
@@ -127,7 +136,7 @@ Confi de los botones en la imagen principal
 /*=============
 Confi del cuadro verde 
 ===============*/
-.beneficios{
+.beneficios {
     width: 80%;
     margin: -40px auto 60px;
     background-color: #a7b178;
@@ -138,21 +147,112 @@ Confi del cuadro verde
     color: #f5ead7;
 }
 
-.beneficio{
+.beneficio {
     width: 25%;
     text-align: center;
 }
 
-.beneficio img{
+.beneficio img {
     width: 50px;
     margin-bottom: 15px;
 }
 
-.beneficio h3{
+.beneficio h3 {
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.beneficio p{
+.beneficio p {
     font-size: 14px;
+}
+
+/*estilos que van a heredar todos los elementos de las paginas*/
+
+/*===================
+colecciones,titulo
+====================*/
+.colecciones {
+    padding: 20px 60px 80px;
+
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-seccion h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;/*sin negrita*/
+    color: #1a1a1a;
+    margin-bottom: 15px;
+
+}
+
+
+
+.tarjeta-coleccion {
+    flex: 1;
+    max-width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer
+
+}
+
+/*================
+cada tarjeta individual
+======================*/
+.tarjetas-coleccion {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/*==================
+foto de cada tarjeta
+*/
+.tarjeta-coleccion img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /*para que las imagenes se ajusten al tamaño sin deformarse*/
+    display: block;/*elimina el espacio debajo de las imagenes*/
+
+}
+
+/* Parte inferior de la tarjeta con nombre y enlace */
+.tarjeta-info {
+    padding: 20px;
+}
+
+.tarjeta-info h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.tarjeta-info p {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+/*color de fondo de cada tarjeta*/
+.tarjeta-rosa{
+    background-color: #c97070;
+    color:#f5ead7;
+}
+.tarjeta-crema{
+    background-color: #e7d1a7f8;
+    color:#3a3a3a;
+}
+.tarjeta-beige{
+    background-color: #e8d9b0;
+    color:#3a3a3a;
+}
+.tarjeta-verde{
+    background-color: #003b2d;
+    color:#f5ead7;
 }
