@@ -123,3 +123,36 @@ Confi de los botones en la imagen principal
     border: 2px solid #f5ead7;
     color: #f5ead7;
 }
+
+/*=============
+Confi del cuadro verde 
+===============*/
+.beneficios{
+    width: 80%;
+    margin: -40px auto 60px;
+    background-color: #a7b178;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+    color: #f5ead7;
+}
+
+.beneficio{
+    width: 25%;
+    text-align: center;
+}
+
+.beneficio img{
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.beneficio h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.beneficio p{
+    font-size: 14px;
+}
