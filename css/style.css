@@ -216,22 +216,17 @@ colecciones,titulo
 
 }
 
-
-
 .tarjeta-coleccion {
-    flex: 1;
-    max-width: 280px;
+    width: 280px;
     border-radius: 12px;
     overflow: hidden;
-    cursor: pointer
-
+    cursor: pointer;
+    transition: 0.3s;
 }
-
 /*================
 cada tarjeta individual
 ======================*/
 .tarjetas-coleccion {
-    flex: 1;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -251,6 +246,10 @@ foto de cada tarjeta
 /* Parte inferior de la tarjeta con nombre y enlace */
 .tarjeta-info {
     padding: 20px;
+    transition: 0.3s;
+}
+.tarjeta-coleccion:hover .tarjeta-info{
+    transform: translateY(-10px);
 }
 
 .tarjeta-info h3 {
