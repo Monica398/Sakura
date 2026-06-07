@@ -78,3 +78,48 @@ Confi de la imagen del arbol de cerezos
     /*Para que no se repita la imagen*/
     background-repeat: no-repeat;
 }
+
+.contenido-cerezos{
+    padding-top: 120px;
+    padding-left: 80px;
+    color: #f5ead7;
+}
+
+.contenido-cerezos h1{
+    font-size: 70px;
+    font-family: Georgia, serif;
+    line-height: 75px;
+    margin-bottom: 30px;
+}
+
+.contenido-cerezos p{
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    width: 600px;
+}
+/*=============
+Confi de los botones en la imagen principal
+===============*/
+.botones{
+    display: flex;
+    gap: 20px;
+}
+
+.btn{
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-ver{
+    background-color: #b7bf8f;
+    color: white;
+}
+
+.btn-nosotros{
+    border: 2px solid #f5ead7;
+    color: #f5ead7;
+}
