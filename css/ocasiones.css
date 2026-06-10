@@ -1,0 +1,133 @@
+
+/*==================
+BANER DE OCASIONES
+===================*/
+
+.banner-ocasiones img {
+    width: 100%; 
+    height:250px;
+    object-fit: cover;/*recorta la imagen sin deformarla*/
+    display: block;/*va a eliminar el espacio extra debajo*/
+    border-radius: 12px;
+}
+
+/*=====================
+PAGINA DE OCASIONES
+======================*/
+
+.pagina-ocasiones {
+    padding: 60px 120px;
+    background-color: #f5ead7;
+}
+
+/*======================
+ENCABEZADO DE OCASIONES
+=====================*/
+.encabezado-ocasiones h1{
+    font-family: Georgia,serif;
+    font-size: 60px;
+    font-weight: normal;/*sin negrita*/
+    color: #003b2d;
+    margin-bottom: 15px;
+
+}
+
+.encabezado-ocasiones p{
+    font-size: 16px;
+    line-height: 26px;
+    color:#555;
+    width: 450px; /*limita el ancho del texto*/
+}
+
+
+/*=====================
+GRID TARJETAS
+======================*/
+.lista-ocasiones{
+    display: grid;/*para activar el sistema de grilla**/
+    grid-template-columns: repeat(5,1fr);/* que las 5 columnas sean iguales*/
+    gap: 20px;/*espacio entre cada tarjeta*/
+    margin-bottom: 50px;
+}
+
+/*=======================
+CADA TARJETA
+========================*/
+.tarjeta-ocasion{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;/*la imagen no se va a salir de los bordes*/
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);/*sombra suavve*/
+    transition: 0.3s;/*animacion*/
+    
+}
+
+.tarjeta-ocasion:hover{
+    transform: translateY(-6px);/*sube un poco al pasar el mouse*/
+
+}
+
+.tarjeta-ocasion img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.info-ocasion{
+    padding: 16px;
+}
+
+.info-ocasion h3{
+    font-family:Georgia,serif;
+    font-size: 18px;
+    font-weight: normal;
+    color:#1a1a1a;
+    margin-bottom: 8px;
+}
+
+.info-ocasion p{
+    font-size: 13px;
+    color:#555;
+    line-height: 20px;
+    margin-bottom: 14px;
+}
+
+.info-ocasion a{
+    font-size: 12px;
+    font-weight: bold;
+    color:#c97070;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s; 
+}
+.info-ocasion a:hover{ 
+    color:#003b2d;/*cuando se pare encima de ver coleccion se pone de color verde*/
+
+}
+
+/*=============
+BOTÓN VER MÁS
+===============*/
+.boton-mas {
+    text-align: center; /* centra el botón */
+}
+
+.btn-ver-mas {
+    display: inline-block;      /* permite aplicar padding a un enlace */
+    padding: 14px 50px;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #003b2d;
+    color: #f5ead7;
+    border-color: #003b2d;
+}
