@@ -1,0 +1,52 @@
+/*=============
+FOOTER
+===============*/
+.footer {
+    background-color: #003b2d;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Contenedor de enlaces y contacto */
+.footer-contenido {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-bottom: 30px;
+}
+
+/* Enlaces rápidos y contacto */
+.footer-links,
+.footer-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links h3,
+.footer-contacto h3 {
+    color: #f5ead7;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+}
+
+.footer-links a,
+.footer-contacto p {
+    color: #c7d39f;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+/*=============
+TEXTO FINAL con el c de marca registrada
+===============*/
+.copy {
+    color: #f5ead7;
+    font-size: 13px;
+    margin-top: 20px;
+}
