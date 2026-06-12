@@ -222,6 +222,8 @@ colecciones,titulo
     overflow: hidden;
     cursor: pointer;
     transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
 }
 /*================
 cada tarjeta individual
