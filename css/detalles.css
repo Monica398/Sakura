@@ -1,0 +1,77 @@
+/*=============
+PAGINA Detalles
+===============*/
+.pagina-detalles {
+    padding: 90px 120px;
+    background-color: #f5ead7;
+}
+
+.encabezado-detalles {
+    margin-bottom: 60px;
+}
+
+.encabezado-detalles h1 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: normal;
+    color: #003b2d;
+    margin-bottom: 25px;
+}
+
+.encabezado-detalles p {
+    width: 500px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #333;
+}
+
+.lista-detalles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+.tarjeta-detalles {
+    background-color: #f5ead7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-detalles img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.info-detalles {
+    padding: 20px;
+    position: relative;
+}
+
+.info-detalles h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+
+.info-detalles p {
+    font-size: 16px;
+    color: #2b2b2b;
+}
+
+.info-detalles button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.info-detalles button img {
+    width: 28px;
+    height: 28px;
+}
