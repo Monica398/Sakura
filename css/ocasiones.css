@@ -113,21 +113,3 @@ BOTÓN VER MÁS
     text-align: center; /* centra el botón */
 }
 
-.btn-ver-mas {
-    display: inline-block;      /* permite aplicar padding a un enlace */
-    padding: 14px 50px;
-    border: 2px solid #1a1a1a;
-    color: #1a1a1a;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.btn-ver-mas:hover {
-    background-color: #003b2d;
-    color: #f5ead7;
-    border-color: #003b2d;
-}
