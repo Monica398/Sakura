@@ -75,3 +75,63 @@ PAGINA RAMOS
     width: 28px;
     height: 28px;
 }
+/* =====================================================
+CELULARES - PÁGINA RAMOS
+===================================================== */
+@media (max-width: 768px) {
+
+    /* Reduce los espacios de la página */
+    .pagina-ramos {
+        padding: 50px 25px;
+    }
+
+    /* Centra el encabezado */
+    .encabezado-ramos {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .encabezado-ramos h1 {
+        font-size: 48px;
+    }
+
+    .encabezado-ramos p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    /* Acomoda los botones del filtro */
+    .filtros {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .filtros button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Hace que los ramos salgan uno debajo del otro */
+    .lista-ramos {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Ajusta las tarjetas al ancho del celular */
+    .tarjeta-ramo {
+        width: 100%;
+    }
+
+    .tarjeta-ramo img {
+        height: 280px;
+    }
+
+    .info-ramo h3 {
+        font-size: 22px;
+    }
+
+    .info-ramo p {
+        font-size: 18px;
+    }
+}

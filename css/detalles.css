@@ -75,3 +75,40 @@ PAGINA Detalles
     width: 28px;
     height: 28px;
 }
+/* =====================================================
+CELULARES - PÁGINA DETALLES
+===================================================== */
+@media (max-width: 768px) {
+
+    .pagina-detalles {
+        padding: 50px 25px;
+    }
+
+    .encabezado-detalles {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .encabezado-detalles h1 {
+        font-size: 48px;
+    }
+
+    .encabezado-detalles p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .lista-detalles {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .tarjeta-detalles {
+        width: 100%;
+    }
+
+    .tarjeta-detalles img {
+        height: 280px;
+    }
+}

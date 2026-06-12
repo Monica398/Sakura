@@ -159,38 +159,6 @@ Confi de los botones en la imagen principal
     color: #f5ead7;
 }
 
-/*=============
-Confi del cuadro verde 
-===============*/
-.beneficios {
-    width: 80%;
-    margin: -40px auto 60px;
-    background-color: #a7b178;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 20px;
-    color: #f5ead7;
-}
-
-.beneficio {
-    width: 25%;
-    text-align: center;
-}
-
-.beneficio img {
-    width: 50px;
-    margin-bottom: 15px;
-}
-
-.beneficio h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.beneficio p {
-    font-size: 14px;
-}
 
 /*estilos que van a heredar todos los elementos de las paginas*/
 
@@ -282,4 +250,91 @@ foto de cada tarjeta
 .tarjeta-verde{
     background-color: #003b2d;
     color:#f5ead7;
+}
+
+/* =====================================================
+CELULARES- PAGINA PRINCIPAL
+===================================================== */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* IMAGEN PRINCIPAL */
+    .cerezos {
+        height: auto;
+    }
+
+    .contenido-cerezos {
+        padding: 80px 25px;
+    }
+
+    .contenido-cerezos h1 {
+        font-size: 48px;
+        line-height: 55px;
+    }
+
+    .contenido-cerezos p {
+        width: 100%;
+        font-size: 20px;
+        line-height: 34px;
+    }
+
+    /* BOTONES */
+    .botones {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 25px;
+        margin-bottom: 80px;
+    }
+
+    .btn {
+        display: block;
+        width: fit-content;
+    }
+
+    /* COLECCIONES */
+    .colecciones {
+        padding-top: 90px;
+    }
+
+    .tarjetas-coleccion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta-coleccion {
+        width: 90%;
+    }
+
+    /* NOSOTROS */
+    .nosotros {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-nosotros {
+        width: 100%;
+    }
+
+    .imagen-nosotros img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* FOOTER */
+    .footer-contenido {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
