@@ -69,11 +69,16 @@ PAGINA RAMOS
     background: none;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .info-ramo button img {
     width: 28px;
     height: 28px;
+}
+
+.info-ramo button:hover {
+    transform: scale(1.25);
 }
 /* =====================================================
 CELULARES - PÁGINA RAMOS
