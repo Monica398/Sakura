@@ -174,8 +174,7 @@ COLORES DE LAS FLORES
 .colores button:hover {
     transform: scale(1.1);
 }
-
-/* Caja de cantidad como en la maqueta */
+/*Cantidad*/
 .cantidad {
     width: 120px;
     margin: 10px auto 0;
@@ -249,7 +248,7 @@ COLORES DE LAS FLORES
     background-color: #6c4248;
 }
 /* =========================
-BLOQUE: ELIGE TUS FLORES
+    ELIGIR LAS FLORES
 ========================= */
 
 /* Cuadro blanco donde van el título y los filtros */
@@ -340,7 +339,7 @@ BLOQUE: ELIGE TUS FLORES
     color: white;
 }
 /* =========================
-BLOQUE: OCASIÓN
+    OCASIÓN
 ========================= */
 
 .campo-ocasion {
@@ -364,7 +363,7 @@ BLOQUE: OCASIÓN
     color: #333;
 }
 /* =========================
-BLOQUE: TARJETA Y CHOCOLATES
+TARJETA Y CHOCOLATES
 ========================= */
 
 .contenedor-extras {
@@ -419,7 +418,7 @@ BLOQUE: TARJETA Y CHOCOLATES
 }
 
 /* =========================
-BLOQUE: INFORMACIÓN DE ENTREGA
+    INFORMACIÓN DE ENTREGA
 ========================= */
 
 .form-entrega {
@@ -495,7 +494,7 @@ RESUMEN DEL RAMO
     font-size: 28px;
 }
 /* =========================
-RESPONSIVE - ARMAR RAMO
+CELULAR - ARMAR RAMO
 ========================= */
 @media (max-width: 768px) {
 
