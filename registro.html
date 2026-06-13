@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registro|Sakura</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Sakura</h1>
+            <p>LA FLORISTERÍA</p>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="ramos.html">RAMOS</a></li>
+                <li><a href="armar_Ramo.html">ARMAR RAMO</a></li>
+                <li><a href="ocasiones.html">OCASIONES</a></li>
+                <li><a href="index.html#nosotros">NOSOTROS</a></li>
+            </ul>
+        </nav>
+        <div class="iconos">
+            <a href="registro.html" class="icono-usuario">
+                <img src="assets/images/person.png" alt="Ir al registro">
+            </a>
+            <button>
+                <img src="assets/images/shopping-cart.png" alt="Carrito">
+            </button>
+        </div>
+    </header>
+    <!--COLUMNA IZQUIERDA-->
+    <main class=lado-izquierdo">
+        <div class="texto-bienvenida">
+            <h2>Crea tu cuenta <br> en Sakura</h2>
+            <div class="linea-decorativa"></div>
+            <p class="descripcion">Únete a nuestra comunidad <br> y disfruta de una experiencia<br>
+                personalizada.</p>
+            <ul class="beneficios">
+                <li class="beneficio-item">
+                    <img src="assets/images/margarita-alternativa (1).png" alt="Pedidos" class="icono-beneficio">
+                    <div class="texto-beneficio">
+                        <strong>Accede a tus pedidos</strong>
+                        <span>Consulta el estado de tus pedidos y compras.</span>
+                    </div>
+                </li>
+                <li class="beneficio.item">
+                    <img src="assets/images/corazon.png" alt="Favoritos" class="icono-beneficio">
+                    <div class="texto-beneficio">
+                        <strong>Guarda tus favoritos</strong>
+                        <span>Guarda y organiza tus ramos y productos favoritos.</span>
+
+                    </div>
+
+                </li>
+                <li class="beneficio-item">
+                    <img src="assets/images/etiqueta.png" alt="Etiqueta" class="icono-beneficio">
+                    <div class="texto-beneficio">
+                        <strong>Ofertas exclusivas</strong>
+                        <span>Recibe promociones y descuentos especiales para ti.</span>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+        <!--COLUMNA DERECHA-->
+        <div class="lado-derecho">
+            <div class="tarjeta-registro">
+                <h2 class="titulo-form">REGÍSTRATE</h2>
+                <p class="subtitulo-form">Completa tus datos para crear tu cuenta</p>
+                <form class="formulario" action="#" method="post">
+                    <!--CAMPO DE NOMBRE-->
+                    <div class="campo-grupo">
+                        <label for="nombre">NOMBRE COMPLETO</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <!--CAMPO DE CORREO-->
+                    <div class="campo grupo">
+                        <label for="correo">CORREO ELECTRÓNICO</label>
+                        <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <!--CAMPO DE CONTRASEÑA-->
+                    <div class="campo-grupo">
+                        <label for="contrasena">CONTRASEÑA</label>
+                        <!-- div especial que pone el input y el ojo en la misma fila -->
+
+                        <div class="input-con-icono">
+                            <!-- va a ocultar con puntos la contraseña-->
+                            <input type="password" id="contrasena" name="contrasena" placeholder="Crea una contraseña"
+                                required>
+                            <button type="button" class="btn-ojo" onclick="togglePassword('contrasena',this)">
+                                <img src="assets/images/ojo.png" alt="Mostrar contraseña" class="img-ojo">
+
+                            </button>
+                        </div>
+                    </div>
+                    <!-- CONFIRMAR CONTRASEÑA-->
+                    <div class="campo-grupo">
+                        <label for="confirmar">CONFIRMAR CONTRASEÑA</label>
+                        <div class="input-con-icono">
+                            <input type="password" id="confirmar" name="confirmar" placeholder="Confirmar tu contraseña"
+                                required>
+                            <button type="button" class="btn-ojo" onclick="togglePassword('confirmar',this)">
+                                <img src="assets/images/ojo.png" alt="Mostrar contraseña" class="img-ojo">
+                            </button>
+                        </div>
+
+                    </div>
+                    <!-- CAMPO TELEFONO-->
+                    <div class="campo-grupo">
+                        <!-- span en línea para que (OPCIONAL) quede junto al label sin bajar -->
+                        <label for="telefono">TELÉFONO<span class="opcional">(OPCIONAL)</span>
+                        </label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu numero de telefono" </div>
+                        <!-- Mensaje si las contraseñas no coinciden -->
+                        <p class="mensaje-error" id="error-contrasena"></p>
+
+                        <!-- BOTÓN ENVIAR -->
+                        <button type="submit" class="btn-crear-cuenta">CREAR CUENTA</button>
+
+                        <p class="link-login">
+                            ¿Ya tienes cuenta? <a href="#">Iniciar sesión</a>
+
+                        </p>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
