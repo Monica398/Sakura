@@ -251,6 +251,23 @@ foto de cada tarjeta
     background-color: #003b2d;
     color:#f5ead7;
 }
+/*=============
+ICONO DEL CARRITO
+===============*/
+
+.icono-carrito {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icono-carrito img {
+    width: 30px;
+}
+
+.icono-carrito:hover {
+    transform: scale(1.1);
+}
 
 /* =====================================================
 CELULARES- PAGINA PRINCIPAL
