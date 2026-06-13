@@ -1,0 +1,544 @@
+/* =========================
+PÁGINA ARMAR RAMO
+========================= */
+
+.armar-ramo {
+    background-color: #f5ead7;
+    padding: 40px 60px;
+    font-family: Arial, sans-serif;
+}
+
+/* Título */
+.titulo-armar {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-armar h2 {
+    color: #7f4f55;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.titulo-armar p {
+    color: #5f5f5f;
+    font-size: 16px;
+}
+
+/* Contenedor principal */
+.contenedor-armar {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Lado izquierdo */
+.zona-productos {
+    width: 70%;
+}
+
+/* Filtros y personalización */
+.filtros,
+.personalizar {
+    background-color: #fffaf4;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.filtros h3,
+.personalizar h3 {
+    color: #7f4f55;
+    margin-bottom: 15px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8b7a3;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Tarjetas de flores */
+.contenedor-flores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+/* Tarjeta más compacta */
+.tarjeta-flor {
+    background-color: #fffaf4;
+    border: 1px solid #e0cfc2;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: none;
+}
+/* Imagen de cada flor más pequeña */
+.tarjeta-flor img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+/* Título más pequeño */
+.tarjeta-flor h4 {
+    color: #003b2d;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+/* Precio más pequeño */
+.precio {
+    color: #003b2d;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+/* Texto antes de los colores */
+.texto-colores {
+    font-size: 13px;
+    color: #003b2d;
+    margin-bottom: 8px;
+}
+
+/* Colores */
+.colores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Botones de colores como circulitos */
+.colores button {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid #d8b7a3;
+    font-size: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.descripcion-flor {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 18px;
+}
+/* =========================
+COLORES DE LAS FLORES
+========================= */
+
+.color-Rojo {
+    background-color: #c91818;
+}
+
+.color-Rosado,
+.color-Rosa {
+    background-color: #f28ca8;
+}
+
+.color-Blanco {
+    background-color: #ffffff;
+}
+
+.color-Morado {
+    background-color: #9b6bb3;
+}
+
+.color-Amarillo {
+    background-color: #f5c542;
+}
+
+.color-Beige {
+    background-color: #e8d6b8;
+}
+
+.color-Naranja {
+    background-color: #f28c28;
+}
+
+.color-Fucsia {
+    background-color: #e83e8c;
+}
+
+.color-Celeste {
+    background-color: #7db7d9;
+}
+.colores button:hover {
+    transform: scale(1.1);
+}
+
+/* Caja de cantidad como en la maqueta */
+.cantidad {
+    width: 120px;
+    margin: 10px auto 0;
+    border: 1px solid #d8b7a3;
+    border-radius: 8px;
+    padding: 6px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cantidad button {
+    background: none;
+    color: #003b2d;
+    border: none;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Resumen */
+.resumen-ramo {
+    width: 30%;
+    background-color: #fffaf4;
+    padding: 25px;
+    border-radius: 22px;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.resumen-ramo h3 {
+    color: #7f4f55;
+    margin-bottom: 20px;
+}
+
+#listaResumen {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.total {
+    border-top: 1px solid #d8b7a3;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.total strong {
+    color: #3f5f4b;
+}
+
+/* Botón pagar */
+.btn-pagar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background-color: #7f4f55;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-pagar:hover {
+    background-color: #6c4248;
+}
+/* =========================
+BLOQUE: ELIGE TUS FLORES
+========================= */
+
+/* Cuadro blanco donde van el título y los filtros */
+.bloque-armar {
+    background-color: #fffaf4;
+    padding: 24px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+/* Acomoda el número 1 y el texto "Elige tus flores" en una fila */
+.titulo-bloque {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Círculo verde donde va el número */
+.titulo-bloque span {
+    /* Color de fondo */
+    background-color: #003b2d;
+    /* Color del número */
+    color: #f5ead7;
+    /* Ancho y alto iguales para que quede redondo */
+    width: 38px;
+    height: 38px;
+    /* Convierte el cuadrado en círculo */
+    border-radius: 50%;
+    /* Centra el número */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Negrita */
+    font-weight: bold;
+}
+
+/* Texto "Elige tus flores" */
+.titulo-bloque h3 {
+    color: #003b2d;
+    font-size: 24px;
+}
+
+/* Acomoda los filtros uno al lado del otro */
+.filtros-armar {
+    display: flex;
+    align-items: end;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Cada filtro tiene su texto arriba y su select abajo */
+.campo-filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Texto del filtro */
+.campo-filtro label {
+    color: #003b2d;
+    font-weight: bold;
+}
+
+/* Cajita del select */
+.campo-filtro select {
+    width: 230px;
+    padding: 12px;
+    border: 1px solid #d8b7a3;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Botón de limpiar filtros */
+.btn-limpiar {
+    padding: 13px 25px;
+    border: 2px solid #d3968c;
+    background-color: transparent;
+    color: #d3968c;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Cambia el color cuando se pasa el mouse encima */
+.btn-limpiar:hover {
+    background-color: #d3968c;
+    color: white;
+}
+/* =========================
+BLOQUE: OCASIÓN
+========================= */
+
+.campo-ocasion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-ocasion label {
+    color: #003b2d;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.campo-ocasion select {
+    width: 360px;
+    padding: 12px;
+    border: 1px solid #d8b7a3;
+    border-radius: 10px;
+    background-color: white;
+    color: #333;
+}
+/* =========================
+BLOQUE: TARJETA Y CHOCOLATES
+========================= */
+
+.contenedor-extras {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.extra-card {
+    width: 220px;
+    border: 1px solid #e0cfc2;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: white;
+}
+
+.extra-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.extra-card h4 {
+    color: #003b2d;
+    margin-bottom: 5px;
+}
+
+.extra-card p {
+    color: #7f4f55;
+    font-weight: bold;
+}
+
+.mensaje-tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mensaje-tarjeta label {
+    color: #003b2d;
+    font-weight: bold;
+}
+
+.mensaje-tarjeta textarea {
+    height: 100px;
+    resize: none;
+    padding: 12px;
+    border: 1px solid #d8b7a3;
+    border-radius: 10px;
+}
+
+/* =========================
+BLOQUE: INFORMACIÓN DE ENTREGA
+========================= */
+
+.form-entrega {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 35px;
+}
+
+.campo-entrega {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-entrega label {
+    color: #003b2d;
+    font-weight: bold;
+}
+
+.campo-entrega input {
+    padding: 12px;
+    border: 1px solid #d8b7a3;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.btn-pagar-entrega {
+    margin-top: 22px;
+    border-radius: 8px;
+    background-color: #d3968c;
+}
+
+.btn-pagar-entrega:hover {
+    background-color: #c77f75;
+}
+/* =========================
+RESUMEN DEL RAMO
+========================= */
+
+/* Mensaje cuando todavía no hay flores */
+.mensaje-vacio {
+    color: #666;
+    margin: 20px 0;
+}
+
+/* Línea separadora */
+.linea-resumen {
+    border-top: 1px solid #d8b7a3;
+    margin: 18px 0;
+}
+
+/* Filas de subtotal, extras y entrega */
+.fila-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+/* Total final */
+.total-final {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-final span {
+    font-weight: bold;
+    color: #003b2d;
+}
+
+.total-final strong {
+    color: #d3968c;
+    font-size: 28px;
+}
+/* =========================
+RESPONSIVE - ARMAR RAMO
+========================= */
+@media (max-width: 768px) {
+
+    .armar-ramo {
+        padding: 40px 25px;
+    }
+
+    .contenedor-armar {
+        flex-direction: column;
+    }
+
+    .zona-productos,
+    .resumen-ramo {
+        width: 100%;
+    }
+
+    .resumen-ramo {
+        position: static;
+    }
+
+    .contenedor-flores {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-armar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .campo-filtro select,
+    .campo-ocasion select {
+        width: 100%;
+    }
+
+    .contenedor-extras {
+        flex-direction: column;
+    }
+
+    .extra-card {
+        width: 100%;
+    }
+
+    .form-entrega {
+        grid-template-columns: 1fr;
+    }
+}
