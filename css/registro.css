@@ -4,11 +4,10 @@ DOS COLUMNAS LADO A LADO
 
 .pagina-registro {
     display: flex;
-    min-height: calc(100vh - 120px);
-    /* 100vh = alto total de pantalla, restamos el header */
+    height: calc(100vh - 109px); 
+    overflow: hidden; /* evita que algo se desborde y cause scroll */
     margin: 0;
     padding: 0;
-    gap: 0;
 }
 
 /* ================================================================
@@ -16,9 +15,9 @@ COLUMNA IZQUIERDA foto de fondo con texto encima
 ================================================================ */
 .lado-izquierdo {
     flex: 1.4;
-    background-image: url('../assets/images/registro3.png');
-    background-size: contain;
-    background-position: left 30% center;
+    background-image: url('../assets/images/refinal.png');
+    background-size:contain;
+    background-position: left  center;
     background-repeat: no-repeat;
     background-color: #f5ead7;
     position: relative;
@@ -34,7 +33,7 @@ TEXTO ENCIMA DE LA FOTO
 .texto-bienvenida {
     position: relative;
     z-index: 1;
-    padding: 60px 60px 60px 555px;
+    padding: 80px 60px 60px 500px;
     color: #000000
 }
 
@@ -113,7 +112,7 @@ COLUMNA DERECHA
     background-color: #f5ead7;
     display: flex;
     align-items: center;
-    justify-content: left center;
+    justify-content: left  center;
     /* Centra la tarjeta vertical y horizontalmente */
     padding: 20px 80px;
 }
@@ -127,7 +126,7 @@ TARJETA BLANCA DEL FORMULARIO
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     /* Sombra que hace flotar la tarjeta sobre el fondo crema */
-    padding: 40px;
+    padding: 28px;
     width: 100%;
     max-width: 480px;
 }
@@ -138,6 +137,7 @@ TARJETA BLANCA DEL FORMULARIO
     color: #003b2d;
     margin-bottom: 6px;
     letter-spacing: 1px;
+    
 }
 
 .subtitulo-form {
@@ -153,7 +153,7 @@ CAMPOS DEL FORMULARIO
 .formulario {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
 }
 
 .campo-grupo {

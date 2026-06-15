@@ -23,11 +23,11 @@ TARJETA PRINCIPAL DE LOGIN
 ================================================================ */
 .tarjeta-login{
     background-color: rgba(245, 234, 215, 0.92);
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12); /* Sombra  */
     padding: 50px 60px;
     width: 100%;
-    max-width: 600px;
+    max-width: 550px;
     text-align: center;
 }
 
@@ -91,17 +91,25 @@ FORMULARIO
 INPUT CON ÍCONO DE OJO 
 ================================================ */
 
-.input-con-icon{
+.input-con-icono{
     position: relative;
     display: flex;
     align-items: center;
 }
 
+.input-con-icono input {
+    padding-right: 45px; /* deja espacio para el ícono */
+}
+
+
+
 .btn-ojo{
     position: absolute;
-    right: 14px;    /* El ojo queda al final del input */
-    background-color: none;
-    border:none;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
     cursor: pointer;
     color: #888;
     display: flex;
@@ -109,11 +117,15 @@ INPUT CON ÍCONO DE OJO
     transition: opacity 0.2s, color 0.2s;
 }
 
-.btn-ojo:hover {
-    color: #003b2d;
-    /* El ojo se pone verde al pasar el mouse */
+.img-ojo {
+    width: 18px;
+    height: 18px;
 }
 
+.btn-ojo:hover {
+    color: #003b2d; /* El ojo se pone verde al pasar el mouse */
+
+}
 /* =========================================
 BOTÓN INICIAR SESIÓN
 ============================================= */
