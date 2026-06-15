@@ -1,0 +1,377 @@
+/*==========================
+DOS COLUMNAS LADO A LADO
+===========================*/
+
+.pagina-registro {
+    display: flex;
+    height: calc(100vh - 109px); 
+    overflow: hidden; /* evita que algo se desborde y cause scroll */
+    margin: 0;
+    padding: 0;
+}
+
+/* ================================================================
+COLUMNA IZQUIERDA foto de fondo con texto encima
+================================================================ */
+.lado-izquierdo {
+    flex: 1.4;
+    background-image: url('../assets/images/refinal.png');
+    background-size:contain;
+    background-position: left  center;
+    background-repeat: no-repeat;
+    background-color: #f5ead7;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+
+
+/* ================================================================
+TEXTO ENCIMA DE LA FOTO
+================================================================ */
+.texto-bienvenida {
+    position: relative;
+    z-index: 1;
+    padding: 80px 60px 60px 500px;
+    color: #000000
+}
+
+.texto-bienvenida h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.linea-decorativa {
+    width: 80px;
+    height: 3px;
+    background-color: #719205;
+    margin-bottom: 25px;
+}
+
+.descripcion {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    color: #000000
+}
+
+
+/* ================================================================
+LISTA DE BENEFICIOS
+================================================================ */
+.beneficios {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* Los li van uno debajo del otro */
+    gap: 22px
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px
+}
+
+.icono-beneficio {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+}
+
+.texto-beneficio {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: #000000
+}
+
+.texto-beneficio strong {
+    font-size: 15px;
+}
+
+.texto-beneficio span {
+    font-size: 13px;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+
+/* ================================================================
+COLUMNA DERECHA
+================================================================ */
+
+.lado-derecho {
+    flex: 1;
+    background-color: #f5ead7;
+    display: flex;
+    align-items: center;
+    justify-content: left  center;
+    /* Centra la tarjeta vertical y horizontalmente */
+    padding: 20px 80px;
+}
+
+/* ================================================================
+TARJETA BLANCA DEL FORMULARIO
+================================================================ */
+
+.tarjeta-registro {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* Sombra que hace flotar la tarjeta sobre el fondo crema */
+    padding: 28px;
+    width: 100%;
+    max-width: 480px;
+}
+
+.titulo-form {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    color: #003b2d;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    
+}
+
+.subtitulo-form {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 24px;
+
+}
+
+/* ================================================================
+CAMPOS DEL FORMULARIO
+================================================================ */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    /* label arriba, input abajo con 6px de separación */
+    gap: 6px;
+}
+
+.campo-grupo label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #444;
+    letter-spacing: 0.8px;
+}
+
+.campo-grupo input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d5c9b5;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fdfaf6;
+    outline: none;
+    /* Elimina el borde azul automático del navegador */
+    transition: border-color 0.2s, box-shadow 0.2s;
+    /* Los cambios ocurren suavemente en 0.2 segundos */
+
+
+}
+
+.campo-grupo input:focus {
+    border-color: #003b2d;
+    box-shadow: 0 0 0 3px rgba(0, 59, 45, 0.1);
+    background-color: #ffffff;
+}
+
+/* ================================================================
+INPUT CON IMAGEN DE OJO (contraseñas)
+================================================================ */
+
+.input-con-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-con-icono input {
+    width: 100%;
+    padding: 12px 45px 12px 16px;
+    border: 1px solid #d5c9b5;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fdfaf6;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-con-icono input:focus {
+
+    border-color: #003b2d;
+    box-shadow: 0 0 0 3px rgba(0, 59, 45, 0.1);
+    background-color: #ffffff;
+}
+
+.btn-ojo {
+    position: absolute;
+    right: 12px;
+    /* Se posiciona al final del input */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.img-ojo {
+    width: 18px;
+    height: 18px;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.btn-ojo:hover .img-ojo {
+    opacity: 0.6;
+    /* Al pasar el mouse el ojo se pone más transparente */
+}
+
+.opcional {
+    font-weight: normal;
+    color: #888;
+    font-size: 10px;
+}
+
+
+/* ================================================================
+MENSAJE DE ERROR
+================================================================ */
+.mensaje-error {
+    display: none;
+    color: #c0392b;
+    font-size: 13px;
+    background-color: #fde8e8;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+
+/* ================================================================
+BOTÓN CREAR CUENTA
+================================================================ */
+
+.btn-crear-cuenta {
+    width: 100%;
+    padding: 14px;
+    background-color: #003b2d;
+    color: #f5ead7;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 4px;
+}
+
+.btn-crear-cuenta:hover {
+    background-color: #005a44;
+    transform: translateY(-1px);
+    /* El botón sube 1px al hacer hover, efecto de que flota */
+}
+
+.btn-crear-cuenta:active {
+    transform: translateY(0);
+}
+
+/* ================================================================
+SEPARADOR
+================================================================ */
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 4px 0;
+}
+
+.separador hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #d5c9b5;
+}
+
+.separador span {
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+    /* Evita que el texto se rompa en dos líneas */
+}
+
+/* ================================================================
+ENLACE INICIAR SESIÓN
+================================================================ */
+
+.link-login {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.link-login a {
+    color: #003b2d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-login a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================================================
+RESPONSIVO
+================================================================ */
+@media (max-width: 768px) {
+    /* Solo aplica cuando la pantalla tiene 768px o menos */
+
+    .pagina-registro {
+        flex-direction: column;
+    }
+
+    .lado-izquierdo {
+        min-height: 280px;
+    }
+
+    .texto-bienvenida {
+        padding: 30px;
+    }
+
+    .texto-bienvenida h2 {
+        font-size: 28px;
+    }
+
+    .lado-derecho {
+        padding: 20px;
+    }
+
+    .tarjeta-registro {
+        padding: 24px;
+    }
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5ead7;
+}

@@ -1,0 +1,215 @@
+/* ================================================================
+FONDO DE LA PÁGINA
+================================================================ */
+
+.pagina-login{
+    min-height: calc(100vh - 120px);
+    background-color: #f5ead7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagina-login::before,
+.pagina-login::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    background-image: url('../assets/images/55.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.pagina-login::before {
+    left: 0;
+    background-position: left bottom;
+}
+
+.pagina-login::after {
+    right: 0;
+    background-position: left bottom;
+    transform: scaleX(-1); /* espeja la misma imagen para que el tono coincida */
+}
+
+/* ================================================================
+TARJETA PRINCIPAL DE LOGIN
+================================================================ */
+.tarjeta-login{
+    position: relative;
+    z-index: 1; /* asegura que la tarjeta quede sobre los fondos */
+    background-color: rgba(245, 234, 215, 0.92);
+    border-radius: 30px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    padding: 60px 50px;      
+    width: 100%;
+    max-width: 420px;        
+    min-height: 520px;      
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+}
+/* ========================================
+TÍTULO Y SUBTÍTULO
+=========================================== */
+.titulo-login{
+    font-family: Georgia,serif;
+    font-size: 32px;
+    color:#003b2d;
+    margin-bottom: 6px;
+    letter-spacing: 2px;
+
+}
+
+.subtitulo-login{
+    font-size: 16px;
+    color:#555;
+    margin-bottom: 30px;
+}
+
+/* ==============================
+FORMULARIO
+================================== */
+.formulario-login{
+    display: flex;
+    flex-direction: column;
+    gap:18px;
+    text-align: left;
+}
+
+.campo-grupo label{
+    font-size: 12px;
+    font-weight: bold;
+    color: #444;
+    letter-spacing: 0.8px;
+
+}
+
+.campo-grupo input{
+    width: 100%;
+    padding: 14px 16px;
+    border :1px solid #d5c9b5;
+    border-radius: 8px;
+    font-size: 14px;
+    color:#333;
+    background-color: #fdfaf6;
+    outline:none;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo-grupo input:focus{
+    border-color: #003b2d;
+    box-shadow:0 0 0 3px rgba(0, 59, 45, 0.1) ;
+    background-color: #ffffff;
+}
+
+
+/* ==============================================
+INPUT CON ÍCONO DE OJO 
+================================================ */
+
+.input-con-icono{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-con-icono input {
+    padding-right: 45px; 
+}
+
+
+
+.btn-ojo{
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.img-ojo {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-ojo:hover {
+    color: #003b2d; /* El ojo se pone verde al pasar el mouse */
+
+}
+/* =========================================
+BOTÓN INICIAR SESIÓN
+============================================= */
+.btn-iniciar-sesion {
+    width: 100%;
+    padding: 16px;
+    background-color: #003b2d;
+    color: #f5ead7;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+
+}
+
+
+.btn-iniciar-sesion:hover {
+    background-color: #005a44;
+    transform: translateY(-1px);
+}
+
+.btn-iniciar-sesion:active {
+    transform: translateY(0);
+}
+
+
+/* =============================
+ENLACE A REGISTRO
+================================ */
+.link-registro {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.link-registro a {
+    color: #003b2d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-registro a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+RESPONSIVO
+================================ */
+@media (max-width: 768px) {
+    .pagina-login {
+        background-image: none;
+        padding: 20px;
+    }
+
+    .tarjeta-login {
+        padding: 30px 25px;
+    }}
