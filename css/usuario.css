@@ -5,8 +5,8 @@ FONDO DE LA PÁGINA
 .pagina-login{
     min-height: calc(100vh - 120px);
     background-image: 
-    url('../assets/images/usuario1.png'),
-    url('../assets/images/usuario2.png');
+    url('../assets/images/55.png'),
+    url('../assets/images/55.png');
     background-position: left bottom,right bottom;
     background-repeat: no-repeat,no-repeat;
     background-size: auto 100%, auto 100%;
@@ -24,13 +24,16 @@ TARJETA PRINCIPAL DE LOGIN
 .tarjeta-login{
     background-color: rgba(245, 234, 215, 0.92);
     border-radius: 30px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12); /* Sombra  */
-    padding: 50px 60px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    padding: 60px 50px;      
     width: 100%;
-    max-width: 550px;
+    max-width: 420px;        
+    min-height: 520px;      
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
     text-align: center;
 }
-
 /* ========================================
 TÍTULO Y SUBTÍTULO
 =========================================== */
@@ -43,7 +46,7 @@ TÍTULO Y SUBTÍTULO
 
 }
 
-.subtitulo.login{
+.subtitulo-login{
     font-size: 16px;
     color:#555;
     margin-bottom: 30px;
@@ -98,7 +101,7 @@ INPUT CON ÍCONO DE OJO
 }
 
 .input-con-icono input {
-    padding-right: 45px; /* deja espacio para el ícono */
+    padding-right: 45px; 
 }
 
 
