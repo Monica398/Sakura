@@ -4,24 +4,46 @@ FONDO DE LA PÁGINA
 
 .pagina-login{
     min-height: calc(100vh - 120px);
-    background-image: 
-    url('../assets/images/55.png'),
-    url('../assets/images/55.png');
-    background-position: left bottom,right bottom;
-    background-repeat: no-repeat,no-repeat;
-    background-size: auto 100%, auto 100%;
     background-color: #f5ead7;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagina-login::before,
+.pagina-login::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    background-image: url('../assets/images/55.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.pagina-login::before {
+    left: 0;
+    background-position: left bottom;
+}
+
+.pagina-login::after {
+    right: 0;
+    background-position: left bottom;
+    transform: scaleX(-1); /* espeja la misma imagen para que el tono coincida */
 }
 
 /* ================================================================
 TARJETA PRINCIPAL DE LOGIN
 ================================================================ */
 .tarjeta-login{
+    position: relative;
+    z-index: 1; /* asegura que la tarjeta quede sobre los fondos */
     background-color: rgba(245, 234, 215, 0.92);
     border-radius: 30px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
