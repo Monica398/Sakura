@@ -1,0 +1,28 @@
+{
+    "colecciones": [
+        {
+            "titulo": "Ramos",
+            "imagen": "assets/images/cumple1.jpg",
+            "enlace": "ramos.html",
+            "clase": "tarjeta-rosa"
+        },
+        {
+            "titulo": "Armar ramo",
+            "imagen": "assets/images/cumple2.jpg",
+            "enlace": "armar_Ramo.html",
+            "clase": "tarjeta-verde"
+        },
+        {
+            "titulo": "Ocasiones",
+            "imagen": "assets/images/cumple3.jpg",
+            "enlace": "ocasiones.html",
+            "clase": "tarjeta-crema"
+        },
+        {
+            "titulo": "Detalles",
+            "imagen": "assets/images/abichuelas.jpg",
+            "enlace": "detalles.html",
+            "clase": "tarjeta-crema"
+        }
+    ]
+}

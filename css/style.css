@@ -196,10 +196,11 @@ colecciones,titulo
 /*================
 cada tarjeta individual
 ======================*/
-.tarjetas-coleccion {
+.contenedor-colecciones {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /*==================
