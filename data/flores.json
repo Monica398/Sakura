@@ -1,0 +1,105 @@
+{
+    "flores": [
+        {
+            "id": 1,
+            "nombre": "Rosa",
+            "precio": 1800,
+            "categoria": "Flor",
+            "estado": "Disponible",
+            "descripcion": "Símbolo del amor, la pasión y la belleza",
+            "imagen": "assets/images/rosaRosada.jpg",
+            "colores": ["Rojo", "Rosado", "Blanco", "Morado"]
+        },
+        {
+            "id": 2,
+            "nombre": "Tulipán",
+            "precio": 1800,
+            "categoria": "Flor",
+            "estado": "Disponible",
+            "descripcion": "Simboliza el amor profundo, la renovación y la elegancia",
+            "imagen": "assets/images/tulipanRosado.jpg",
+            "colores": ["Blanco", "Rosado", "Rojo"]
+        },
+        {
+            "id": 3,
+            "nombre": "Lirio",
+            "precio": 1800,
+            "categoria": "Flor",
+            "estado": "Disponible",
+            "descripcion": "Simbolo de la realeza. En la Biblia, el lirio representa la promesa de una nueva vida y resurrección.",
+            "imagen": "assets/images/lirioRosado.jpg",
+            "colores": ["Amarillo", "Rosado", "Blanco", "Beige", "Naranja"]
+        },
+        {
+            "id": 4,
+            "nombre": "Girasol",
+            "precio": 1800,
+            "categoria": "Flor",
+            "estado": "Disponible",
+            "descripcion": "Símbolo del Sol, la alegría y la energía positiva",
+            "imagen": "assets/images/girasol.jpg",
+            "colores": ["Amarillo"]
+        },
+        {
+            "id": 5,
+            "nombre": "Gerberas",
+            "precio": 1700,
+            "categoria": "Flor",
+            "estado": "Disponible",
+            "descripcion": "Símbolo de la alegría, la inocencia y la pureza",
+            "imagen": "assets/images/Gerberas.jpg",
+            "colores": ["Rosa", "Rojo", "Naranja", "Amarillo", "Fucsia", "Blanco", "Rosado bebé"]
+        },
+        {
+            "id": 6,
+            "nombre": "Clavel",
+            "precio": 1800,
+            "categoria": "Flor",
+            "estado": "Disponible",
+            "descripcion": "Símbolo de amor, pasión y buena suerte.",
+            "imagen": "assets/images/clavelRosado.jpg",
+            "colores": ["Rojo", "Rosado", "Blanco", "Naranja"]
+        },
+        {
+            "id": 7,
+            "nombre": "Hortensia",
+            "precio": 1800,
+            "categoria": "Flor",
+            "estado": "Disponible",
+            "descripcion": "Símbolo de la gratitud y la abundancia",
+            "imagen": "assets/images/hortenciasCelestes.jpg",
+            "colores": ["Celeste", "Blanco"]
+        },
+        {
+            "id": 8,
+            "nombre": "Baby's Breath",
+            "precio": 1800,
+            "categoria": "Flor",
+            "estado": "Disponible",
+            "descripcion": "Símbolo de inocencia y pureza.",
+            "imagen": "assets/images/bbyBreath.jpg",
+            "colores": ["Blanco"]
+        }
+    ],
+
+    "extras": [
+        {
+            "id": 9,
+            "nombre": "Tarjeta",
+            "precio": 1500,
+            "categoria": "Extra",
+            "estado": "Disponible",
+            "descripcion": "Tarjeta personalizada para agregar un mensaje especial.",
+            "imagen": "assets/images/tarjeta.jpg"
+        },
+        {
+            "id": 10,
+            "nombre": "Chocolates",
+            "precio": 3000,
+            "categoria": "Extra",
+            "estado": "Disponible",
+            "descripcion": "Chocolates para complementar el detalle floral.",
+            "imagen": "assets/images/chocolate.jpg"
+        }
+    ]
+}
