@@ -494,12 +494,12 @@ RESUMEN DEL RAMO
     font-size: 28px;
 }
 /* =========================
-CELULAR - ARMAR RAMO
+MEDIA QUERY TABLET
 ========================= */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     .armar-ramo {
-        padding: 40px 25px;
+        padding: 40px 35px;
     }
 
     .contenedor-armar {
@@ -513,6 +513,28 @@ CELULAR - ARMAR RAMO
 
     .resumen-ramo {
         position: static;
+    }
+
+    .contenedor-flores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .campo-ocasion select {
+        width: 100%;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL
+========================= */
+@media (max-width: 700px) {
+
+    .armar-ramo {
+        padding: 40px 25px;
+    }
+
+    .titulo-armar h2 {
+        font-size: 34px;
     }
 
     .contenedor-flores {
@@ -539,5 +561,32 @@ CELULAR - ARMAR RAMO
 
     .form-entrega {
         grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL PEQUEÑO
+========================= */
+@media (max-width: 420px) {
+
+    .armar-ramo {
+        padding: 30px 18px;
+    }
+
+    .titulo-armar h2 {
+        font-size: 28px;
+    }
+
+    .titulo-bloque h3 {
+        font-size: 20px;
+    }
+
+    .tarjeta-flor img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .total-final strong {
+        font-size: 24px;
     }
 }

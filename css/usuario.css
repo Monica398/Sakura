@@ -199,17 +199,68 @@ ENLACE A REGISTRO
 .link-registro a:hover {
     text-decoration: underline;
 }
+/* =========================
+MEDIA QUERY TABLET
+========================= */
+@media (max-width: 900px) {
 
-
-/* ==============================
-RESPONSIVO
-================================ */
-@media (max-width: 768px) {
     .pagina-login {
-        background-image: none;
-        padding: 20px;
+        padding: 35px;
     }
 
     .tarjeta-login {
-        padding: 30px 25px;
-    }}
+        max-width: 420px;
+        padding: 45px 40px;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL
+========================= */
+@media (max-width: 700px) {
+
+    .pagina-login {
+        padding: 25px;
+    }
+
+    .pagina-login::before,
+    .pagina-login::after {
+        display: none;
+    }
+
+    .tarjeta-login {
+        padding: 35px 25px;
+        min-height: auto;
+    }
+
+    .titulo-login {
+        font-size: 28px;
+    }
+
+    .subtitulo-login {
+        font-size: 15px;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL PEQUEÑO
+========================= */
+@media (max-width: 420px) {
+
+    .pagina-login {
+        padding: 20px 15px;
+    }
+
+    .tarjeta-login {
+        padding: 30px 20px;
+        border-radius: 22px;
+    }
+
+    .titulo-login {
+        font-size: 24px;
+    }
+
+    .btn-iniciar-sesion {
+        padding: 14px;
+    }
+}

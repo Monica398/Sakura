@@ -336,19 +336,48 @@ ENLACE INICIAR SESIÓN
     text-decoration: underline;
 }
 
-
-/* ================================================================
-RESPONSIVO
-================================================================ */
-@media (max-width: 768px) {
-    /* Solo aplica cuando la pantalla tiene 768px o menos */
+/* =========================
+MEDIA QUERY TABLET
+========================= */
+@media (max-width: 900px) {
 
     .pagina-registro {
         flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+
+    .lado-izquierdo {
+        min-height: 320px;
+        background-size: contain;
+        background-position: left center;
+    }
+
+    .texto-bienvenida {
+        padding: 40px;
+    }
+
+    .lado-derecho {
+        justify-content: center;
+        padding: 35px;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL
+========================= */
+@media (max-width: 700px) {
+
+    .pagina-registro {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
     }
 
     .lado-izquierdo {
         min-height: 280px;
+        background-size: cover;
+        background-position: center;
     }
 
     .texto-bienvenida {
@@ -359,19 +388,51 @@ RESPONSIVO
         font-size: 28px;
     }
 
+    .descripcion {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
     .lado-derecho {
         padding: 20px;
+        justify-content: center;
     }
 
     .tarjeta-registro {
         padding: 24px;
     }
-
 }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #f5ead7;
+/* =========================
+MEDIA QUERY MÓVIL PEQUEÑO
+========================= */
+@media (max-width: 420px) {
+
+    .lado-izquierdo {
+        min-height: 240px;
+    }
+
+    .texto-bienvenida {
+        padding: 24px 18px;
+    }
+
+    .texto-bienvenida h2 {
+        font-size: 24px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+
+    .beneficios {
+        gap: 16px;
+    }
+
+    .tarjeta-registro {
+        padding: 20px;
+    }
+
+    .titulo-form {
+        font-size: 22px;
+    }
 }

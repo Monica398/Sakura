@@ -80,12 +80,35 @@ PAGINA RAMOS
 .info-ramo button:hover {
     transform: scale(1.25);
 }
-/* =====================================================
-CELULARES - PÁGINA RAMOS
-===================================================== */
-@media (max-width: 768px) {
+/* =========================
+MEDIA QUERY TABLET
+========================= */
 
-    /* Reduce los espacios de la página */
+@media (max-width: 900px) {
+
+    /* Reduce el espacio de los lados */
+    .pagina-ramos {
+        padding: 70px 50px;
+    }
+
+    /* En tablet pasa de 4 columnas a 2 columnas */
+    .lista-ramos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* El texto puede ocupar todo el ancho */
+    .encabezado-ramos p {
+        width: 100%;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL
+========================= */
+
+@media (max-width: 700px) {
+
+    /* Reduce más el espacio en celular */
     .pagina-ramos {
         padding: 50px 25px;
     }
@@ -106,7 +129,7 @@ CELULARES - PÁGINA RAMOS
         line-height: 28px;
     }
 
-    /* Acomoda los botones del filtro */
+    /* Si tienes filtros, se acomodan en el centro */
     .filtros {
         justify-content: center;
         gap: 10px;
@@ -117,13 +140,12 @@ CELULARES - PÁGINA RAMOS
         max-width: 280px;
     }
 
-    /* Hace que los ramos salgan uno debajo del otro */
+    /* En celular los ramos salen uno debajo del otro */
     .lista-ramos {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
-    /* Ajusta las tarjetas al ancho del celular */
     .tarjeta-ramo {
         width: 100%;
     }
@@ -138,5 +160,24 @@ CELULARES - PÁGINA RAMOS
 
     .info-ramo p {
         font-size: 18px;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL PEQUEÑO
+========================= */
+
+@media (max-width: 420px) {
+
+    .pagina-ramos {
+        padding: 40px 18px;
+    }
+
+    .encabezado-ramos h1 {
+        font-size: 38px;
+    }
+
+    .tarjeta-ramo img {
+        height: 240px;
     }
 }

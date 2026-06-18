@@ -114,15 +114,32 @@ BOTÓN VER MÁS
     text-align: center; /* centra el botón */
 }
 
-/* =====================================================
-CELULAR - OCASIONES
-===================================================== */
-@media (max-width: 768px) {
+/* =========================
+MEDIA QUERY TABLET
+========================= */
+@media (max-width: 900px) {
+
+    .pagina-ocasiones {
+        padding: 50px;
+    }
+
+    /* De 5 columnas pasa a 3 */
+    .lista-ocasiones {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .encabezado-ocasiones p {
+        width: 100%;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL
+========================= */
+@media (max-width: 700px) {
 
     .banner-ocasiones img {
-        width: 100%;
         height: 250px;
-        object-fit: cover;
     }
 
     .pagina-ocasiones {
@@ -143,8 +160,8 @@ CELULAR - OCASIONES
         line-height: 28px;
     }
 
+    /* Una sola columna en celular */
     .lista-ocasiones {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
     }
@@ -154,17 +171,32 @@ CELULAR - OCASIONES
     }
 
     .tarjeta-ocasion img {
-        width: 100%;
         height: 280px;
-        object-fit: cover;
     }
 
     .info-ocasion {
         text-align: center;
     }
+}
 
-    .footer-contenido {
-        flex-direction: column;
-        gap: 20px;
+/* =========================
+MEDIA QUERY MÓVIL PEQUEÑO
+========================= */
+@media (max-width: 420px) {
+
+    .pagina-ocasiones {
+        padding: 40px 18px;
+    }
+
+    .encabezado-ocasiones h1 {
+        font-size: 38px;
+    }
+
+    .banner-ocasiones img {
+        height: 180px;
+    }
+
+    .tarjeta-ocasion img {
+        height: 220px;
     }
 }

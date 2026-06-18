@@ -75,15 +75,40 @@ PAGINA Detalles
     width: 28px;
     height: 28px;
 }
-/* =====================================================
-CELULARES - PÁGINA DETALLES
-===================================================== */
-@media (max-width: 768px) {
+/* =========================
+MEDIA QUERY TABLET
+========================= */
 
+@media (max-width: 900px) {
+
+    /* Reduce el espacio de los lados */
+    .pagina-detalles {
+        padding: 70px 50px;
+    }
+
+    /* En tablet pasa de 4 columnas a 2 columnas */
+    .lista-detalles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* El texto puede ocupar todo el ancho */
+    .encabezado-detalles p {
+        width: 100%;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL
+========================= */
+
+@media (max-width: 700px) {
+
+    /* Reduce más el espacio en celular */
     .pagina-detalles {
         padding: 50px 25px;
     }
 
+    /* Centra el encabezado */
     .encabezado-detalles {
         text-align: center;
         margin-bottom: 40px;
@@ -99,6 +124,18 @@ CELULARES - PÁGINA DETALLES
         line-height: 28px;
     }
 
+    /* Si tienes filtros, se acomodan en el centro */
+    .filtros {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .filtros button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* En celular los ramos salen uno debajo del otro */
     .lista-detalles {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -110,5 +147,32 @@ CELULARES - PÁGINA DETALLES
 
     .tarjeta-detalles img {
         height: 280px;
+    }
+
+    .info-detalles h3 {
+        font-size: 22px;
+    }
+
+    .info-detalles p {
+        font-size: 18px;
+    }
+}
+
+/* =========================
+MEDIA QUERY MÓVIL PEQUEÑO
+========================= */
+
+@media (max-width: 420px) {
+
+    .pagina-detalles {
+        padding: 40px 18px;
+    }
+
+    .encabezado-detalles h1 {
+        font-size: 38px;
+    }
+
+    .tarjeta-detalles img {
+        height: 240px;
     }
 }

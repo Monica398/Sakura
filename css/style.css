@@ -271,24 +271,74 @@ ICONO DEL CARRITO
 }
 
 /* =====================================================
-CELULARES- PAGINA PRINCIPAL
+HACE QUE SE OCULTE Y MUESTRE LA HAMBURGUESA
 ===================================================== */
-@media (max-width: 768px) {
+.menu-toggle {
+    display: none;
+}
 
-    /* HEADER */
+.menu-button {
+    display: none;
+    width: 38px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.menu-button span {
+    display: block;
+    height: 4px;
+    margin-bottom: 6px;
+    background-color: #f5ead7;
+    border-radius: 4px;
+}
+/* =====================================================
+HAMBURGUESA
+===================================================== */
+@media (max-width: 700px) {
+
     .header {
-        flex-direction: column;
+        position: relative;
         padding: 20px;
-        gap: 20px;
+    }
+
+    .logo h1 {
+        font-size: 45px;
+        line-height: 42px;
+    }
+
+    .logo p {
+        font-size: 10px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 95px;
+        left: 0;
+        width: 100%;
+        background-color: #003b2d;
+        padding: 15px;
+        z-index: 999;
+    }
+
+    .menu-toggle:checked ~ .menu {
+        display: block;
     }
 
     .menu ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
 
-    /* IMAGEN PRINCIPAL */
+    .iconos {
+        display: none;
+    }
+
     .cerezos {
         height: auto;
     }
@@ -308,7 +358,6 @@ CELULARES- PAGINA PRINCIPAL
         line-height: 34px;
     }
 
-    /* BOTONES */
     .botones {
         flex-direction: column;
         align-items: flex-start;
@@ -316,26 +365,10 @@ CELULARES- PAGINA PRINCIPAL
         margin-bottom: 80px;
     }
 
-    .btn {
-        display: block;
-        width: fit-content;
-    }
-
-    /* COLECCIONES */
-    .colecciones {
-        padding-top: 90px;
-    }
-
-    .tarjetas-coleccion {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .tarjeta-coleccion {
         width: 90%;
     }
 
-    /* NOSOTROS */
     .nosotros {
         flex-direction: column;
         text-align: center;
@@ -349,10 +382,81 @@ CELULARES- PAGINA PRINCIPAL
         width: 100%;
         height: auto;
     }
+}
+/* =========================
+TABLET
+========================= */
+@media (max-width: 900px) {
 
-    /* FOOTER */
-    .footer-contenido {
-        flex-direction: column;
+    .header {
+        padding: 20px 30px;
+    }
+
+    .menu ul {
         gap: 20px;
+    }
+
+    .contenido-cerezos h1 {
+        font-size: 55px;
+    }
+}
+/* =========================
+CELULAR
+========================= */
+@media (max-width: 700px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 95px;
+        left: 0;
+        width: 100%;
+        background-color: #003b2d;
+        padding: 15px;
+    }
+
+    .menu-toggle:checked ~ .menu {
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .contenido-cerezos h1 {
+        font-size: 48px;
+    }
+
+    .contenido-cerezos p {
+        width: 100%;
+    }
+
+    .nosotros {
+        flex-direction: column;
+    }
+}
+/* =========================
+CELULAR PEQUEÑO
+========================= */
+@media (max-width: 420px) {
+
+    .logo h1 {
+        font-size: 35px;
+    }
+
+    .contenido-cerezos h1 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 }
