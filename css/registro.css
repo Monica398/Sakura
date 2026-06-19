@@ -376,7 +376,7 @@ MEDIA QUERY MÓVIL
     }
 
     .lado-izquierdo {
-        min-height: auto;
+        min-height: 520px;
         background-size: cover;
         background-position: center;
         padding: 40px 25px;
@@ -388,45 +388,32 @@ MEDIA QUERY MÓVIL
     }
 
     .texto-bienvenida h2 {
-        font-size: 34px;
+        font-size: 36px;
+        line-height: 42px;
     }
 
     .descripcion {
         font-size: 16px;
         line-height: 26px;
+        width: 100%;
     }
 
+    /* Oculta los beneficios en celular para que no se vea saturado */
     .beneficios {
-        align-items: flex-start;
-        gap: 18px;
+        display: none;
     }
-
-    .lado-derecho {
-        padding: 30px 25px;
-        justify-content: center;
-    }
-
-    .tarjeta-registro {
-        max-width: 100%;
-    }
-
 }
 
 /* =========================
 MEDIA QUERY MÓVIL PEQUEÑO
 ========================= */
 @media (max-width: 420px) {
+    .lado-izquierdo {
+        min-height: 450px;
+    }
+
     .texto-bienvenida h2 {
-        font-size: 28px;
-    }
-
-    .beneficio-item {
-        gap: 10px;
-    }
-
-    .icono-beneficio {
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
+        font-size: 30px;
+        line-height: 36px;
     }
 }
