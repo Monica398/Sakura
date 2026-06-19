@@ -14,6 +14,9 @@ FOOTER
     gap: 120px;
     margin-bottom: 30px;
 }
+.footer-contacto {
+    margin-bottom: 25px;
+}
 
 /* Enlaces rápidos y contacto */
 .footer-links,
@@ -28,7 +31,7 @@ FOOTER
 .footer-contacto h3 {
     color: #f5ead7;
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: Georgia, serif;
 }
 
