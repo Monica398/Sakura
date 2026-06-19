@@ -336,7 +336,7 @@ HAMBURGUESA
     }
 
     .iconos {
-        display: none;
+        display: flex;
     }
 
     .cerezos {
