@@ -367,40 +367,28 @@ MEDIA QUERY TABLET
 /* =========================
 MEDIA QUERY MÓVIL
 ========================= */
+/* =========================
+MEDIA QUERY MÓVIL
+========================= */
 @media (max-width: 700px) {
 
     .pagina-registro {
-        flex-direction: column;
+        display: block;
         height: auto;
         overflow: visible;
     }
 
     .lado-izquierdo {
-        min-height: 520px;
-        background-size: cover;
-        background-position: center;
-        padding: 40px 25px;
-    }
-
-    .texto-bienvenida {
-        padding: 0;
-        text-align: center;
-    }
-
-    .texto-bienvenida h2 {
-        font-size: 36px;
-        line-height: 42px;
-    }
-
-    .descripcion {
-        font-size: 16px;
-        line-height: 26px;
-        width: 100%;
-    }
-
-    /* Oculta los beneficios en celular para que no se vea saturado */
-    .beneficios {
         display: none;
+    }
+
+    .lado-derecho {
+        padding: 30px 20px;
+        justify-content: center;
+    }
+
+    .tarjeta-registro {
+        max-width: 100%;
     }
 }
 
