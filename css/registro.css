@@ -4,8 +4,9 @@ DOS COLUMNAS LADO A LADO
 
 .pagina-registro {
     display: flex;
-    height: calc(100vh - 109px); 
-    overflow: hidden; /* evita que algo se desborde y cause scroll */
+    height: calc(100vh - 109px);
+    overflow: hidden;
+    /* evita que algo se desborde y cause scroll */
     margin: 0;
     padding: 0;
 }
@@ -16,8 +17,8 @@ COLUMNA IZQUIERDA foto de fondo con texto encima
 .lado-izquierdo {
     flex: 1.4;
     background-image: url('../assets/images/refinal.png');
-    background-size:contain;
-    background-position: left  center;
+    background-size: contain;
+    background-position: left center;
     background-repeat: no-repeat;
     background-color: #f5ead7;
     position: relative;
@@ -112,7 +113,7 @@ COLUMNA DERECHA
     background-color: #f5ead7;
     display: flex;
     align-items: center;
-    justify-content: left  center;
+    justify-content: left center;
     /* Centra la tarjeta vertical y horizontalmente */
     padding: 20px 80px;
 }
@@ -137,7 +138,7 @@ TARJETA BLANCA DEL FORMULARIO
     color: #003b2d;
     margin-bottom: 6px;
     letter-spacing: 1px;
-    
+
 }
 
 .subtitulo-form {
@@ -375,64 +376,57 @@ MEDIA QUERY MÓVIL
     }
 
     .lado-izquierdo {
-        min-height: 280px;
+        min-height: auto;
         background-size: cover;
         background-position: center;
+        padding: 40px 25px;
     }
 
     .texto-bienvenida {
-        padding: 30px;
+        padding: 0;
+        text-align: center;
     }
 
     .texto-bienvenida h2 {
-        font-size: 28px;
+        font-size: 34px;
     }
 
     .descripcion {
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 26px;
+    }
+
+    .beneficios {
+        align-items: flex-start;
+        gap: 18px;
     }
 
     .lado-derecho {
-        padding: 20px;
+        padding: 30px 25px;
         justify-content: center;
     }
 
     .tarjeta-registro {
-        padding: 24px;
+        max-width: 100%;
     }
+
 }
 
 /* =========================
 MEDIA QUERY MÓVIL PEQUEÑO
 ========================= */
 @media (max-width: 420px) {
-
-    .lado-izquierdo {
-        min-height: 240px;
-    }
-
-    .texto-bienvenida {
-        padding: 24px 18px;
-    }
-
     .texto-bienvenida h2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
-    .descripcion {
-        font-size: 14px;
+    .beneficio-item {
+        gap: 10px;
     }
 
-    .beneficios {
-        gap: 16px;
-    }
-
-    .tarjeta-registro {
-        padding: 20px;
-    }
-
-    .titulo-form {
-        font-size: 22px;
+    .icono-beneficio {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
     }
 }
