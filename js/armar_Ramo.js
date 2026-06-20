@@ -10,6 +10,7 @@ const totalGeneral = document.getElementById("totalGeneral");
 const totalExtrasTexto = document.getElementById("totalExtras");
 const checkTarjeta = document.getElementById("tarjeta");
 const checkChocolates = document.getElementById("chocolates");
+const btnPagar = document.getElementById("btnPagar");
 
 
 checkTarjeta.addEventListener("change", actualizarResumen);
@@ -19,29 +20,30 @@ const filtroTipo = document.getElementById("filtroTipo");
 const filtroColor = document.getElementById("filtroColor");
 filtroTipo.addEventListener("change", mostrarFlores);
 filtroColor.addEventListener("change", mostrarFlores);
+btnPagar.addEventListener("click", pagar);
 const costoEntrega = 2500;
 
 
 // Esta función muestra las flores en la página
 function mostrarFlores() {
 
-    
+
     let contenido = "";
 
-    
+
     for (const flor of flores) {
 
         if (filtroTipo.value !== "Todas" && flor.nombre !== filtroTipo.value) {
             continue;
         }
 
-        
+
         let tieneColor = false;
 
-        
+
         for (const color of flor.colores) {
 
-            
+
             if (color === filtroColor.value) {
                 tieneColor = true;
             }
@@ -98,35 +100,35 @@ function sumarCantidad(id) {
 
         if (flor.id === id) {
 
-            
+
             flor.cantidad++;
         }
     }
 
-    
+
     mostrarFlores();
 
-    
+
     actualizarResumen();
 }
 
 function restarCantidad(id) {
 
-    
+
     for (const flor of flores) {
 
-        
+
         if (flor.id === id && flor.cantidad > 0) {
 
-            
+
             flor.cantidad--;
         }
     }
 
-    
+
     mostrarFlores();
 
-    
+
     actualizarResumen();
 }
 
@@ -136,18 +138,18 @@ function seleccionarColor(id, color) {
 
     for (const flor of flores) {
 
-        
+
         if (flor.id === id) {
 
-            
+
             flor.colorSeleccionado = color;
         }
     }
 
-    
+
     mostrarFlores();
 
-    
+
     actualizarResumen();
 }
 
@@ -155,7 +157,7 @@ function seleccionarColor(id, color) {
 // actualiza el resumen del pedido
 function actualizarResumen() {
 
-    
+
     let contenidoResumen = "";
     let subtotal = 0;
     let totalExtras = 0;
@@ -164,7 +166,7 @@ function actualizarResumen() {
         totalExtras += 1500;
     }
 
-    
+
     if (checkChocolates.checked) {
         totalExtras += 3000;
     }
@@ -172,13 +174,13 @@ function actualizarResumen() {
     for (const flor of flores) {
         if (flor.cantidad > 0) {
 
-            
+
             let totalFlor = flor.precio * flor.cantidad;
 
-            
+
             subtotal = subtotal + totalFlor;
 
-            
+
             contenidoResumen += `
                 <div class="item-resumen">
                     <p>
@@ -202,20 +204,75 @@ function actualizarResumen() {
         `;
     } else {
 
-        
+
         listaResumen.innerHTML = contenidoResumen;
     }
 
-    
+
     subtotalFlores.innerHTML = "₡" + subtotal;
 
-    
+
     totalExtrasTexto.innerHTML = "₡" + totalExtras;
 
-    
+
     totalGeneral.innerHTML = "₡" + (subtotal + totalExtras + costoEntrega);
+    guardarRamoPendiente();
 }
 
+function guardarRamoPendiente() {
+
+    const ramoPendiente = {
+        flores: flores,
+        tarjeta: checkTarjeta.checked,
+        chocolates: checkChocolates.checked
+    };
+
+    localStorage.setItem("ramoPendiente", JSON.stringify(ramoPendiente));
+}
+function pagar() {
+
+    const usuarioActivo = localStorage.getItem("usuarioActivo");
+
+    if (usuarioActivo === null) {
+
+        localStorage.setItem("volverArmarRamo", "si");
+
+        alert("Primero debes registrarte para realizar el pago.");
+
+        window.location.href = "registro.html";
+
+    } else {
+
+        alert("Pago realizado correctamente. ¡Gracias por tu compra!");
+
+        localStorage.removeItem("ramoPendiente");
+
+        const datosRamo = localStorage.getItem("ramoPendiente");
+
+        if (datosRamo !== null) {
+
+            const ramoPendiente = JSON.parse(datosRamo);
+
+            flores = ramoPendiente.flores;
+
+            checkTarjeta.checked = ramoPendiente.tarjeta;
+            checkChocolates.checked = ramoPendiente.chocolates;
+
+        } else {
+
+            for (const flor of flores) {
+                flor.cantidad = 0;
+                flor.colorSeleccionado = "";
+            }
+        }
+
+        checkTarjeta.checked = false;
+        checkChocolates.checked = false;
+
+        mostrarFlores();
+        actualizarResumen();
+    }
+}
 /*======================
 PARTE QUE TENEMOS QUE REVISAR CON RESPESCTO A UNIR EL JSON CON EL JS,TENTATIVA
 =======================*/
