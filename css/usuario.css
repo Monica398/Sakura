@@ -8,7 +8,7 @@ FONDO DE LA PÁGINA
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 85px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -21,7 +21,7 @@ FONDO DE LA PÁGINA
     top: 0;
     bottom: 0;
     width: 40%;
-    background-image: url('../assets/images/55.png');
+    background-image: url('../assets/images/liflores7.png');
     background-size: auto 100%;
     background-repeat: no-repeat;
     z-index: 0;
