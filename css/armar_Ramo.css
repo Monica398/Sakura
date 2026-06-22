@@ -416,6 +416,7 @@ CONTENEDOR DE FILTROS
     align-items: end;
     gap: 25px;
     flex-wrap: wrap;
+    margin-bottom: 35px;
 }
 
 
