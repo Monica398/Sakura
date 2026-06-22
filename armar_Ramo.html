@@ -2,14 +2,23 @@
 <html lang="es">
 
 <head>
+
+    <!-- ===================================================== -->
+    <!-- CONFIGURACIÓN PRINCIPAL DE LA PÁGINA -->
+    <!-- ===================================================== -->
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/armar_Ramo.css">
+
     <link rel="stylesheet" href="css/footer.css">
 
-    <title> Armar Ramos | Sakura</title>
+    <title>Armar Ramos | Sakura</title>
+
 </head>
 
 <body>
@@ -20,23 +29,19 @@
 
     <header class="header">
 
-        <!-- LOGO -->
         <div class="logo">
             <h1>Sakura</h1>
             <p>LA FLORISTERÍA</p>
         </div>
 
-        <!-- Checkbox oculto para abrir/cerrar el menú -->
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-        <!-- Botón hamburguesa -->
         <label for="menu-toggle" class="menu-button">
             <span></span>
             <span></span>
             <span></span>
         </label>
 
-        <!-- MENÚ DE NAVEGACIÓN -->
         <nav class="menu">
             <ul>
                 <li><a href="index.html">INICIO</a></li>
@@ -44,12 +49,11 @@
                 <li><a href="armar_Ramo.html">ARMAR RAMO</a></li>
                 <li><a href="ocasiones.html">OCASIONES</a></li>
                 <li><a href="detalles.html">DETALLES</a></li>
-                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="index.html#nosotros">NOSOTROS</a></li>
                 <li><a href="#contacto">CONTACTO</a></li>
             </ul>
         </nav>
 
-        <!-- ICONOS DEL MENÚ -->
         <div class="iconos">
             <a href="registro.html" class="icono-usuario">
                 <img src="assets/images/person.png" alt="Ir al registro">
@@ -58,23 +62,37 @@
 
     </header>
 
-    <!-- PAGINA RAMOS -->
+    <!-- ===================================================== -->
+    <!-- CONTENIDO PRINCIPAL DE ARMAR RAMO -->
+    <!-- ===================================================== -->
+
     <main class="armar-ramo">
 
+        <!-- ===================================================== -->
         <!-- TÍTULO DE LA PÁGINA -->
+        <!-- ===================================================== -->
+
         <section class="titulo-armar">
             <h2>Armar ramo</h2>
             <p>Elige tus flores, colores y detalles para crear un ramo especial.</p>
         </section>
 
+        <!-- ===================================================== -->
         <!-- CONTENEDOR PRINCIPAL -->
+        <!-- ===================================================== -->
+
         <section class="contenedor-armar">
 
+            <!-- ===================================================== -->
             <!-- LADO IZQUIERDO: FLORES Y OPCIONES -->
+            <!-- ===================================================== -->
+
             <div class="zona-productos">
 
-                <!-- FILTROS -->
+                <!-- ===================================================== -->
                 <!-- SECCIÓN 1: ELEGIR FLORES -->
+                <!-- ===================================================== -->
+
                 <div class="bloque-armar">
 
                     <div class="titulo-bloque">
@@ -86,6 +104,7 @@
 
                         <div class="campo-filtro">
                             <label>Filtrar por tipo</label>
+
                             <select id="filtroTipo">
                                 <option value="Todas">Todas</option>
                                 <option value="Rosa">Rosas</option>
@@ -101,6 +120,7 @@
 
                         <div class="campo-filtro">
                             <label>Filtrar por color</label>
+
                             <select id="filtroColor">
                                 <option value="Todos">Todos</option>
                                 <option value="Rojo">Rojo</option>
@@ -114,13 +134,20 @@
                             </select>
                         </div>
 
-                    </div>
-                    <!-- AQUÍ SE VAN A CARGAR LAS FLORES DESDE JSON -->
-                    <div id="contenedorFlores" class="contenedor-flores">
-                        <!-- JavaScript va poner aquí las tarjetas -->
+                        <div class="campo-filtro">
+                            <label>Buscar</label>
+
+                            <input type="text" id="buscarFlor" placeholder="Buscar por tipo o color">
+                        </div>
+
                     </div>
 
+                    <div id="contenedorFlores" class="contenedor-flores"></div>
+
+                    <!-- ===================================================== -->
                     <!-- SECCIÓN 2: OCASIÓN -->
+                    <!-- ===================================================== -->
+
                     <div class="bloque-armar">
 
                         <div class="titulo-bloque">
@@ -144,7 +171,10 @@
 
                     </div>
 
+                    <!-- ===================================================== -->
                     <!-- SECCIÓN 3: EXTRAS -->
+                    <!-- ===================================================== -->
+
                     <div class="bloque-armar">
 
                         <div class="titulo-bloque">
@@ -154,45 +184,32 @@
 
                         <div class="contenedor-extras">
 
-                            <!-- Tarjeta -->
                             <div class="extra-card">
-
                                 <input type="checkbox" id="tarjeta">
-
                                 <img src="assets/images/tarjeta.jpg" alt="Tarjeta">
-
                                 <h4>Tarjeta</h4>
-
                                 <p>₡1500</p>
-
                             </div>
 
-                            <!-- Chocolates -->
                             <div class="extra-card">
-
                                 <input type="checkbox" id="chocolates">
-
                                 <img src="assets/images/chocolate.jpg" alt="Chocolates">
-
                                 <h4>Chocolates</h4>
-
                                 <p>₡3000</p>
-
                             </div>
 
                         </div>
 
-                        <!-- Mensaje -->
                         <div class="mensaje-tarjeta">
-
                             <label>Mensaje para la tarjeta (opcional)</label>
-
-                            <textarea placeholder="Escribe tu mensaje aquí...">
-                            </textarea>
+                            <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
                         </div>
                     </div>
 
+                    <!-- ===================================================== -->
                     <!-- SECCIÓN 4: INFORMACIÓN DE ENTREGA -->
+                    <!-- ===================================================== -->
+
                     <div class="bloque-armar">
 
                         <div class="titulo-bloque">
@@ -233,18 +250,18 @@
                 </div>
             </div>
 
-            <!-- LADO DERECHO: RESUMEN -->
+            <!-- ===================================================== -->
+            <!-- LADO DERECHO: RESUMEN DEL RAMO -->
+            <!-- ===================================================== -->
+
             <aside class="resumen-ramo">
 
                 <h3>Resumen del ramo</h3>
 
-                <!-- Aquí JavaScript va agregar las flores -->
                 <div id="listaResumen">
-
                     <p class="mensaje-vacio">
                         Aún no has agregado flores.
                     </p>
-
                 </div>
 
                 <div class="linea-resumen"></div>
@@ -276,6 +293,7 @@
         </section>
 
     </main>
+
     <!-- ===================================================== -->
     <!-- FOOTER -->
     <!-- ===================================================== -->
@@ -285,35 +303,44 @@
         <!-- ===================================================== -->
         <!-- INFORMACIÓN DE CONTACTO -->
         <!-- ===================================================== -->
+
         <div id="contacto" class="footer-contacto">
-
             <h3>Contacto</h3>
-
             <p>San José, Costa Rica</p>
             <p>+506 8888 8888</p>
             <p>sakurafloristeri@gmail.com</p>
             <p>Lunes a Sábado 9:00 a.m - 5:00 p.m</p>
         </div>
 
-        <!-- ENLACES -->
-        <div class="footer-links">
+        <!-- ===================================================== -->
+        <!-- ENLACES RÁPIDOS -->
+        <!-- ===================================================== -->
 
+        <div class="footer-links">
             <h3>Enlaces rápidos</h3>
             <a href="index.html">Inicio</a>
-            <a href="index.html#nosotros">NOSOTROS</a>
+            <a href="index.html#nosotros">Nosotros</a>
             <a href="ramos.html">Ramos</a>
             <a href="ocasiones.html">Ocasiones</a>
             <a href="detalles.html">Detalles</a>
         </div>
 
-
+        <!-- ===================================================== -->
         <!-- COPYRIGHT -->
+        <!-- ===================================================== -->
+
         <p class="copy">
             © 2026 Sakura Floristería - Todos los derechos reservados
         </p>
+
     </footer>
 
+    <!-- ===================================================== -->
+    <!-- CONEXIÓN CON JAVASCRIPT -->
+    <!-- ===================================================== -->
+
     <script src="js/armar_Ramo.js"></script>
+
 </body>
 
 </html>
