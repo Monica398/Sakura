@@ -20,6 +20,8 @@ const checkChocolates = document.getElementById("chocolates");
 const btnPagar = document.getElementById("btnPagar");
 const buscarFlor = document.getElementById("buscarFlor");
 const btnLimpiarFiltros = document.getElementById("btnLimpiarFiltros");
+const filtroTipo = document.getElementById("filtroTipo");
+const filtroColor = document.getElementById("filtroColor");
 
 
 /*=====================================================
@@ -31,13 +33,8 @@ checkTarjeta.addEventListener("change", actualizarResumen);
 checkChocolates.addEventListener("change", actualizarResumen);
 btnPagar.addEventListener("click", pagar);
 btnLimpiarFiltros.addEventListener("click", limpiarFiltros);
-
-const filtroTipo = document.getElementById("filtroTipo");
-const filtroColor = document.getElementById("filtroColor");
-
 filtroTipo.addEventListener("change", mostrarFlores);
 filtroColor.addEventListener("change", mostrarFlores);
-
 
 
 /*=====================================================
