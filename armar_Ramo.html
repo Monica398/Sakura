@@ -140,114 +140,119 @@
                             <input type="text" id="buscarFlor" placeholder="Buscar por tipo o color">
                         </div>
 
-                    </div>
-
-                    <div id="contenedorFlores" class="contenedor-flores"></div>
-
-                    <!-- ===================================================== -->
-                    <!-- SECCIÓN 2: OCASIÓN -->
-                    <!-- ===================================================== -->
-
-                    <div class="bloque-armar">
-
-                        <div class="titulo-bloque">
-                            <span>2</span>
-                            <h3>Ocasión</h3>
-                        </div>
-
-                        <div class="campo-ocasion">
-                            <label for="ocasion">Selecciona la ocasión de tu ramo</label>
-
-                            <select id="ocasion">
-                                <option value="">Selecciona una ocasión</option>
-                                <option value="Cumpleaños">Cumpleaños</option>
-                                <option value="Aniversario">Aniversario</option>
-                                <option value="Graduación">Graduación</option>
-                                <option value="Amor">Amor</option>
-                                <option value="Agradecimiento">Agradecimiento</option>
-                                <option value="Otro">Otro</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <!-- ===================================================== -->
-                    <!-- SECCIÓN 3: EXTRAS -->
-                    <!-- ===================================================== -->
-
-                    <div class="bloque-armar">
-
-                        <div class="titulo-bloque">
-                            <span>3</span>
-                            <h3>Agrega extras (opcional)</h3>
-                        </div>
-
-                        <div class="contenedor-extras">
-
-                            <div class="extra-card">
-                                <input type="checkbox" id="tarjeta">
-                                <img src="assets/images/tarjeta.jpg" alt="Tarjeta">
-                                <h4>Tarjeta</h4>
-                                <p>₡1500</p>
-                            </div>
-
-                            <div class="extra-card">
-                                <input type="checkbox" id="chocolates">
-                                <img src="assets/images/chocolate.jpg" alt="Chocolates">
-                                <h4>Chocolates</h4>
-                                <p>₡3000</p>
-                            </div>
-
-                        </div>
-
-                        <div class="mensaje-tarjeta">
-                            <label>Mensaje para la tarjeta (opcional)</label>
-                            <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
-                        </div>
-                    </div>
-
-                    <!-- ===================================================== -->
-                    <!-- SECCIÓN 4: INFORMACIÓN DE ENTREGA -->
-                    <!-- ===================================================== -->
-
-                    <div class="bloque-armar">
-
-                        <div class="titulo-bloque">
-                            <span>4</span>
-                            <h3>Información de entrega</h3>
-                        </div>
-
-                        <div class="form-entrega">
-
-                            <div class="campo-entrega">
-                                <label>Tu nombre</label>
-                                <input type="text" placeholder="Escribe tu nombre">
-                            </div>
-
-                            <div class="campo-entrega">
-                                <label>Teléfono</label>
-                                <input type="text" placeholder="Escribe tu teléfono">
-                            </div>
-
-                            <div class="campo-entrega">
-                                <label>Fecha de entrega</label>
-                                <input type="date">
-                            </div>
-
-                            <div class="campo-entrega">
-                                <label>Dirección de entrega</label>
-                                <input type="text" placeholder="Escribe la dirección completa">
-                            </div>
-
-                        </div>
-
-                        <button id="btnPagar" class="btn-pagar btn-pagar-entrega">
-                            Pagar
-                        </button>
-
+                        <div button id="btnLimpiarFiltros" class="btn-limpiar">
+                            Limpiar filtros
+                            </button>
                     </div>
 
                 </div>
+
+                <div id="contenedorFlores" class="contenedor-flores"></div>
+
+                <!-- ===================================================== -->
+                <!-- SECCIÓN 2: OCASIÓN -->
+                <!-- ===================================================== -->
+
+                <div class="bloque-armar">
+
+                    <div class="titulo-bloque">
+                        <span>2</span>
+                        <h3>Ocasión</h3>
+                    </div>
+
+                    <div class="campo-ocasion">
+                        <label for="ocasion">Selecciona la ocasión de tu ramo</label>
+
+                        <select id="ocasion">
+                            <option value="">Selecciona una ocasión</option>
+                            <option value="Cumpleaños">Cumpleaños</option>
+                            <option value="Aniversario">Aniversario</option>
+                            <option value="Graduación">Graduación</option>
+                            <option value="Amor">Amor</option>
+                            <option value="Agradecimiento">Agradecimiento</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- SECCIÓN 3: EXTRAS -->
+                <!-- ===================================================== -->
+
+                <div class="bloque-armar">
+
+                    <div class="titulo-bloque">
+                        <span>3</span>
+                        <h3>Agrega extras (opcional)</h3>
+                    </div>
+
+                    <div class="contenedor-extras">
+
+                        <div class="extra-card">
+                            <input type="checkbox" id="tarjeta">
+                            <img src="assets/images/tarjeta.jpg" alt="Tarjeta">
+                            <h4>Tarjeta</h4>
+                            <p>₡1500</p>
+                        </div>
+
+                        <div class="extra-card">
+                            <input type="checkbox" id="chocolates">
+                            <img src="assets/images/chocolate.jpg" alt="Chocolates">
+                            <h4>Chocolates</h4>
+                            <p>₡3000</p>
+                        </div>
+
+                    </div>
+
+                    <div class="mensaje-tarjeta">
+                        <label>Mensaje para la tarjeta (opcional)</label>
+                        <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- SECCIÓN 4: INFORMACIÓN DE ENTREGA -->
+                <!-- ===================================================== -->
+
+                <div class="bloque-armar">
+
+                    <div class="titulo-bloque">
+                        <span>4</span>
+                        <h3>Información de entrega</h3>
+                    </div>
+
+                    <div class="form-entrega">
+
+                        <div class="campo-entrega">
+                            <label>Tu nombre</label>
+                            <input type="text" placeholder="Escribe tu nombre">
+                        </div>
+
+                        <div class="campo-entrega">
+                            <label>Teléfono</label>
+                            <input type="text" placeholder="Escribe tu teléfono">
+                        </div>
+
+                        <div class="campo-entrega">
+                            <label>Fecha de entrega</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="campo-entrega">
+                            <label>Dirección de entrega</label>
+                            <input type="text" placeholder="Escribe la dirección completa">
+                        </div>
+
+                    </div>
+
+                    <button id="btnPagar" class="btn-pagar btn-pagar-entrega">
+                        Pagar
+                    </button>
+
+                </div>
+
+            </div>
             </div>
 
             <!-- ===================================================== -->

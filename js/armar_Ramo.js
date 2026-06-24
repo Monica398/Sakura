@@ -19,6 +19,7 @@ const checkTarjeta = document.getElementById("tarjeta");
 const checkChocolates = document.getElementById("chocolates");
 const btnPagar = document.getElementById("btnPagar");
 const buscarFlor = document.getElementById("buscarFlor");
+const btnLimpiarFiltros = document.getElementById("btnLimpiarFiltros");
 
 
 /*=====================================================
@@ -29,12 +30,14 @@ buscarFlor.addEventListener("input", mostrarFlores);
 checkTarjeta.addEventListener("change", actualizarResumen);
 checkChocolates.addEventListener("change", actualizarResumen);
 btnPagar.addEventListener("click", pagar);
+btnLimpiarFiltros.addEventListener("click", limpiarFiltros);
 
 const filtroTipo = document.getElementById("filtroTipo");
 const filtroColor = document.getElementById("filtroColor");
 
 filtroTipo.addEventListener("change", mostrarFlores);
 filtroColor.addEventListener("change", mostrarFlores);
+
 
 
 /*=====================================================
@@ -44,6 +47,18 @@ COSTOS FIJOS
 const costoEntrega = 2500;
 
 
+/*=====================================================
+FUNCIÓN LIMPIAR FILTROS
+=====================================================*/
+
+function limpiarFiltros() {
+
+    filtroTipo.value = "Todas";
+    filtroColor.value = "Todos";
+    buscarFlor.value = "";
+
+    mostrarFlores();
+}
 /*=====================================================
 FUNCIÓN MOSTRAR FLORES
 =====================================================*/
@@ -316,7 +331,6 @@ function pagar() {
 
     alert("Pago realizado correctamente. ¡Gracias por tu compra!");
 
-    localStorage.removeItem("usuarioActivo");
     localStorage.removeItem("ramoPendiente");
 
     for (const flor of flores) {

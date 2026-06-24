@@ -481,6 +481,9 @@ BOTÓN LIMPIAR FILTROS
     cursor: pointer;
 }
 
+.campo-filtro button {
+    width: 230px;
+}
 
 /*=====================================================
 HOVER DEL BOTÓN LIMPIAR
