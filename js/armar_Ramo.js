@@ -18,6 +18,10 @@ const totalExtrasTexto = document.getElementById("totalExtras");
 const checkTarjeta = document.getElementById("tarjeta");
 const checkChocolates = document.getElementById("chocolates");
 const btnPagar = document.getElementById("btnPagar");
+const inputNombre = document.getElementById("inputNombre");
+const inputTelefono = document.getElementById("inputTelefono");
+const inputFecha = document.getElementById("inputFecha");
+const inputDireccion = document.getElementById("inputDireccion");
 const buscarFlor = document.getElementById("buscarFlor");
 const btnLimpiarFiltros = document.getElementById("btnLimpiarFiltros");
 const filtroTipo = document.getElementById("filtroTipo");
@@ -32,10 +36,17 @@ buscarFlor.addEventListener("input", mostrarFlores);
 checkTarjeta.addEventListener("change", actualizarResumen);
 checkChocolates.addEventListener("change", actualizarResumen);
 btnPagar.addEventListener("click", pagar);
+inputNombre.addEventListener("input", () => { inputNombre.style.border = ""; });
+inputTelefono.addEventListener("input", () => { inputTelefono.style.border = ""; });
+inputFecha.addEventListener("change", () => { inputFecha.style.border = ""; });
+inputDireccion.addEventListener("input", () => { inputDireccion.style.border = ""; });
 btnLimpiarFiltros.addEventListener("click", limpiarFiltros);
 filtroTipo.addEventListener("change", mostrarFlores);
 filtroColor.addEventListener("change", mostrarFlores);
-
+inputNombre.addEventListener("input", guardarRamoPendiente);
+inputTelefono.addEventListener("input", guardarRamoPendiente);
+inputFecha.addEventListener("change", guardarRamoPendiente);
+inputDireccion.addEventListener("input", guardarRamoPendiente);
 
 /*=====================================================
 COSTOS FIJOS
@@ -265,16 +276,17 @@ FUNCIÓN GUARDAR RAMO PENDIENTE
 =====================================================*/
 
 function guardarRamoPendiente() {
-
     const ramoPendiente = {
         flores: flores,
         tarjeta: checkTarjeta.checked,
-        chocolates: checkChocolates.checked
+        chocolates: checkChocolates.checked,
+        nombre: inputNombre.value,
+        telefono: inputTelefono.value,
+        fecha: inputFecha.value,
+        direccion: inputDireccion.value
     };
-
     localStorage.setItem("ramoPendiente", JSON.stringify(ramoPendiente));
 }
-
 
 /*=====================================================
 FUNCIÓN PAGAR
@@ -298,6 +310,27 @@ function pagar() {
         alert("Debes agregar al menos una flor al ramo.");
         return;
     }
+
+    const nombre = inputNombre.value.trim();
+    const telefono = inputTelefono.value.trim();
+    const fecha = inputFecha.value.trim();
+    const direccion = inputDireccion.value.trim();
+
+    if (nombre === "" || telefono === "" || fecha === "" || direccion === "") {
+        inputNombre.style.border = nombre === "" ? "2px solid red" : "";
+        inputTelefono.style.border = telefono === "" ? "2px solid red" : "";
+        inputFecha.style.border = fecha === "" ? "2px solid red" : "";
+        inputDireccion.style.border = direccion === "" ? "2px solid red" : "";
+
+        alert("Por favor completa todos los campos de información de entrega.");
+        return;
+    }
+
+    inputNombre.style.border = "";
+    inputTelefono.style.border = "";
+    inputFecha.style.border = "";
+    inputDireccion.style.border = "";
+
 
     /*=====================================================
     GUARDAR RAMO ANTES DE CAMBIAR DE PÁGINA
@@ -365,7 +398,10 @@ fetch("data/flores.json")
 
             checkTarjeta.checked = ramoPendiente.tarjeta;
             checkChocolates.checked = ramoPendiente.chocolates;
-
+            inputNombre.value = ramoPendiente.nombre || "";
+            inputTelefono.value = ramoPendiente.telefono || "";
+            inputFecha.value = ramoPendiente.fecha || "";
+            inputDireccion.value = ramoPendiente.direccion || "";
         } else {
 
             for (const flor of flores) {
