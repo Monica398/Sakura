@@ -26,6 +26,8 @@ const buscarFlor = document.getElementById("buscarFlor");
 const btnLimpiarFiltros = document.getElementById("btnLimpiarFiltros");
 const filtroTipo = document.getElementById("filtroTipo");
 const filtroColor = document.getElementById("filtroColor");
+// Obtiene el textarea donde el usuario escribe el mensaje.
+const inputMensaje = document.getElementById("inputMensaje");
 
 
 /*=====================================================
@@ -367,6 +369,8 @@ function pagar() {
     inputTelefono.value = "";
     inputFecha.value = "";
     inputDireccion.value = "";
+    // Borra el mensaje escrito por el usuario.
+inputMensaje.value = "";
 
     for (const flor of flores) {
         flor.cantidad = 0;
