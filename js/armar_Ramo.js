@@ -17,8 +17,6 @@ const totalGeneral = document.getElementById("totalGeneral");
 const totalExtrasTexto = document.getElementById("totalExtras");
 const checkTarjeta = document.getElementById("tarjeta");
 const checkChocolates = document.getElementById("chocolates");
-const selectOcasion = document.getElementById("ocasion");
-const inputMensaje = document.getElementById("mensaje");
 const btnPagar = document.getElementById("btnPagar");
 const inputNombre = document.getElementById("inputNombre");
 const inputTelefono = document.getElementById("inputTelefono");
@@ -361,25 +359,14 @@ function pagar() {
     SI SÍ HAY USUARIO, SE REALIZA EL PAGO
     =====================================================*/
 
-    alert("Pago realizado correctamente. ¡Gracias por su compra!");
+    alert("Pago realizado correctamente. ¡Gracias por tu compra!");
 
     localStorage.removeItem("ramoPendiente");
 
-    // Borrar datos de entrega
     inputNombre.value = "";
     inputTelefono.value = "";
     inputFecha.value = "";
     inputDireccion.value = "";
-
-    // Borrar ocasión y mensaje
-    selectOcasion.value = "";
-    inputMensaje.value = "";
-
-    // Borrar bordes
-    inputNombre.style.border = "";
-    inputTelefono.style.border = "";
-    inputFecha.style.border = "";
-    inputDireccion.style.border = "";
 
     for (const flor of flores) {
         flor.cantidad = 0;
@@ -391,7 +378,6 @@ function pagar() {
 
     mostrarFlores();
     actualizarResumen();
-    
 }
 
 
