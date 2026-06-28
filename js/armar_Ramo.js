@@ -391,6 +391,7 @@ function pagar() {
 
     mostrarFlores();
     actualizarResumen();
+    
 }
 
 
