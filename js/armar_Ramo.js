@@ -17,6 +17,10 @@ const totalGeneral = document.getElementById("totalGeneral");
 const totalExtrasTexto = document.getElementById("totalExtras");
 const checkTarjeta = document.getElementById("tarjeta");
 const checkChocolates = document.getElementById("chocolates");
+// Obtiene el select donde el usuario elige la ocasión.
+const selectOcasion = document.getElementById("ocasion");
+// Obtiene el textarea donde el usuario escribe el mensaje.
+const inputMensaje = document.getElementById("inputMensaje");
 const btnPagar = document.getElementById("btnPagar");
 const inputNombre = document.getElementById("inputNombre");
 const inputTelefono = document.getElementById("inputTelefono");
@@ -26,8 +30,7 @@ const buscarFlor = document.getElementById("buscarFlor");
 const btnLimpiarFiltros = document.getElementById("btnLimpiarFiltros");
 const filtroTipo = document.getElementById("filtroTipo");
 const filtroColor = document.getElementById("filtroColor");
-// Obtiene el textarea donde el usuario escribe el mensaje.
-const inputMensaje = document.getElementById("inputMensaje");
+
 
 
 /*=====================================================
@@ -371,6 +374,8 @@ function pagar() {
     inputDireccion.value = "";
     // Borra el mensaje escrito por el usuario.
 inputMensaje.value = "";
+// Quita la ocasión seleccionada y vuelve a la opción inicial.
+selectOcasion.value = "";
 
     for (const flor of flores) {
         flor.cantidad = 0;
