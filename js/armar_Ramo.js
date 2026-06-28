@@ -378,6 +378,7 @@ function pagar() {
 
     mostrarFlores();
     actualizarResumen();
+    localStorage.removeItem("ramoPendiente");
 }
 
 
