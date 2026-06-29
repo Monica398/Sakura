@@ -79,6 +79,7 @@ function mostrarFlores() {
 
     for (const flor of flores) {
 
+        //Buscador tipo de flor
         if (buscarFlor.value !== "") {
 
             let texto = buscarFlor.value.toLowerCase();
@@ -87,6 +88,7 @@ function mostrarFlores() {
 
             let coincideColor = false;
 
+            //Buscador tipo de color
             for (const color of flor.colores) {
                 if (color.toLowerCase().includes(texto)) {
                     coincideColor = true;
@@ -333,15 +335,10 @@ function pagar() {
     inputFecha.style.border = "";
     inputDireccion.style.border = "";
 
-
-    /*=====================================================
-    GUARDAR RAMO ANTES DE CAMBIAR DE PÁGINA
-    =====================================================*/
-
     guardarRamoPendiente();
 
     /*=====================================================
-    VALIDAR SI HAY USUARIO REGISTRADO
+    VALIDAR SI EL USUARIO ESTA REGISTRADO
     =====================================================*/
 
     const usuarioActivo = localStorage.getItem("usuarioActivo");
@@ -358,11 +355,12 @@ function pagar() {
     }
 
     /*=====================================================
-    SI SÍ HAY USUARIO, SE REALIZA EL PAGO
+    SI HAY UN USUARIO REGISTRADO,SE HACE EL PAGO
     =====================================================*/
 
-    alert("Pago realizado correctamente. ¡Gracias por tu compra!");
-
+    alert("Pago realizado correctamente. ¡Gracias por Su compra!");
+    
+    localStorage.removeItem("usuarioActivo");
     localStorage.removeItem("ramoPendiente");
 
     inputNombre.value = "";
@@ -405,7 +403,6 @@ fetch("data/flores.json")
             const ramoPendiente = JSON.parse(datosRamo);
 
             flores = ramoPendiente.flores;
-
             checkTarjeta.checked = ramoPendiente.tarjeta;
             checkChocolates.checked = ramoPendiente.chocolates;
             inputNombre.value = ramoPendiente.nombre || "";
