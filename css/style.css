@@ -75,7 +75,7 @@ Cambia color al pasar el mouse
     border-bottom: 2px solid #c7d39f;
     padding-bottom: 5px;
 }
-.activo {
+.menu a.activo {
     color: #c7d39f;
 }
 /*=============
