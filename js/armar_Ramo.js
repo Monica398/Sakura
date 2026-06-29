@@ -362,7 +362,7 @@ function pagar() {
     SI HAY UN USUARIO REGISTRADO,SE HACE EL PAGO
     =====================================================*/
 
-    alert("Pago realizado correctamente. ¡Gracias por Su compra!");
+    alert(" Se realizó el pago correctamente.¡Gracias por su compra!");
 
     
     localStorage.removeItem("ramoPendiente");
