@@ -24,7 +24,7 @@ function mostrarColecciones(colecciones) {
     // Mostramos las tarjetas en el HTML
     contenedorColecciones.innerHTML = contenido;
 }
-/*TENTATIVO HAY QUE VER COMO LO HACE LA PROFE*/
+
 // Cargamos el archivo JSON
 fetch("data/colecciones.json")
     .then(respuesta => respuesta.json())
