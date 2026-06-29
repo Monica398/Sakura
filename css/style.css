@@ -70,14 +70,15 @@ Cambia color al pasar el mouse
     letter-spacing: 1px;
     transition: 0.3s;
 }
+.menu a.activo {
+    color: #c7d39f;
+}
 .menu a:hover{
     color: #c7d39f;
     border-bottom: 2px solid #c7d39f;
     padding-bottom: 5px;
 }
-.menu a.activo {
-    color: #c7d39f;
-}
+
 /*=============
 Confi de los iconos de la barra
 ===============*/
