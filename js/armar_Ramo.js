@@ -154,6 +154,10 @@ function mostrarFlores() {
         `;
     }
 
+    if (contenido === "") {
+        contenido = "<p>No se encontró </p>";
+    }
+
     contenedorFlores.innerHTML = contenido;
 }
 

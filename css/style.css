@@ -26,7 +26,6 @@ Header
     display: flex;
     /* Separa el logo y el menú */
     justify-content: space-between;
-    /* Centra las cosas verticalmente */
     align-items: center;
     padding: 20px 60px;
 }
@@ -53,7 +52,7 @@ Logo
 Menu de navegación
 ===============*/
 .menu ul {
-    /* Flexbox sirve para poner el menú horizontal */
+    
     display: flex;
     list-style: none;
     /* Da el espacio entre opciones */
@@ -75,6 +74,9 @@ Cambia color al pasar el mouse
     color: #c7d39f;
     border-bottom: 2px solid #c7d39f;
     padding-bottom: 5px;
+}
+.activo {
+    color: #c7d39f;
 }
 /*=============
 Confi de los iconos de la barra
