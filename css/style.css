@@ -240,38 +240,22 @@ foto de cada tarjeta
 }
 /*color de fondo de cada tarjeta*/
 .tarjeta-rosa{
-    background-color: #c97070;
+     background-color: #003b2d;
     color:#f5ead7;
 }
 .tarjeta-crema{
-    background-color: #e7d1a7f8;
-    color:#3a3a3a;
-}
-.tarjeta-beige{
-    background-color: #e8d9b0;
-    color:#3a3a3a;
-}
-.tarjeta-verde{
-    background-color: #003b2d;
+   background-color: #003b2d;
     color:#f5ead7;
 }
-/*=============
-ICONO DEL CARRITO
-===============*/
-
-.icono-carrito {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.tarjeta-beige{
+       background-color: #003b2d;
+    color:#f5ead7;
+}
+.tarjeta-verde{
+   background-color: #003b2d;
+    color:#f5ead7;
 }
 
-.icono-carrito img {
-    width: 30px;
-}
-
-.icono-carrito:hover {
-    transform: scale(1.1);
-}
 
 /* =====================================================
 HACE QUE SE OCULTE Y MUESTRE LA HAMBURGUESA
