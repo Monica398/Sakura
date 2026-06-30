@@ -7,7 +7,7 @@ let extras = [];
 
 
 /*=====================================================
-OBTENER ELEMENTOS DEL HTML
+ELEMENTOS DEL HTML
 =====================================================*/
 
 const contenedorFlores = document.getElementById("contenedorFlores");
@@ -51,7 +51,7 @@ inputFecha.addEventListener("change", guardarRamoPendiente);
 inputDireccion.addEventListener("input", guardarRamoPendiente);
 
 /*=====================================================
-COSTOS FIJOS
+COSTO FIJO
 =====================================================*/
 
 const costoEntrega = 2500;
@@ -79,6 +79,11 @@ function mostrarFlores() {
 
     for (const flor of flores) {
 
+
+        
+        /*==============
+        BÚSQUEDA 
+        ================*/
         //Buscador tipo de flor
         if (buscarFlor.value !== "") {
 
@@ -100,9 +105,17 @@ function mostrarFlores() {
             }
         }
 
+        /*========================
+        FILTRO POR TIPO DE FLOR
+        ==========================*/
+
         if (filtroTipo.value !== "Todas" && flor.nombre !== filtroTipo.value) {
             continue;
         }
+
+        /*==================
+        FILTRO POR COLOR
+        ====================*/
 
         let tieneColor = false;
 
@@ -364,7 +377,7 @@ function pagar() {
 
     alert(" Se realizó el pago correctamente.¡Gracias por su compra!");
 
-    
+
     localStorage.removeItem("ramoPendiente");
 
     inputNombre.value = "";
@@ -385,7 +398,7 @@ function pagar() {
     mostrarFlores();
     actualizarResumen();
     localStorage.removeItem("ramoPendiente");
-    
+
 }
 
 

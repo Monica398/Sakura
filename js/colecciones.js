@@ -1,10 +1,8 @@
 const contenedorColecciones = document.getElementById("contenedorColecciones");
 function mostrarColecciones(colecciones) {
 
-    // Aquí se va guardando el HTML
     let contenido = "";
 
-    // Recorremos cada colección que viene del JSON
     for (const coleccion of colecciones) {
 
         contenido += `
@@ -25,7 +23,6 @@ function mostrarColecciones(colecciones) {
     contenedorColecciones.innerHTML = contenido;
 }
 
-// Cargamos el archivo JSON
 fetch("data/colecciones.json")
     .then(respuesta => respuesta.json())
     .then(datos => {

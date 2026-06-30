@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     /*======================================
-    crear cuenta
+    CREAR CUENTA
     =======================================*/
     formulario.addEventListener("submit", function (evento) {
         evento.preventDefault(); // evita que la pagina se recargue
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("usuarios", JSON.stringify(usuarios));          // guarda el array completo
         localStorage.setItem("usuarioActivo", JSON.stringify(nuevoUsuario)); // guarda quien está activo
 
-        mensajeError.textContent = "¡Cuenta creada con éxito! Bienvenida a Sakura 🌸";
+        mensajeError.textContent = "¡Cuenta creada con éxito! Bienvenida a Sakura ";
         mensajeError.style.display = "block";
         mensajeError.style.color = "#155724";
         mensajeError.style.backgroundColor = "#d4edda";
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         formulario.reset();
 
-       /* setTimeout(function () {
+        /* setTimeout(function () {
             window.location.href = "index.html";
         }, 2000);*/
     }
