@@ -378,7 +378,7 @@ function pagar() {
     alert(" Se realizó el pago correctamente.¡Gracias por su compra!");
 
 
-    localStorage.removeItem("usuarioActivo");
+    
     localStorage.removeItem("ramoPendiente");
 
     inputNombre.value = "";
@@ -398,7 +398,7 @@ function pagar() {
 
     mostrarFlores();
     actualizarResumen();
-    localStorage.removeItem("usuarioActivo");
+
     localStorage.removeItem("ramoPendiente");
 
 }
